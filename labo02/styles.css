@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fffdff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/*helpers*/
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.row {
+    display: flex;
+    gap: 2rem;
+}
+
+.row>div {
+    flex: 1;
+    border: 1px dashed #3498db;
+    padding: 1rem;
+}
+
+.alpha {
+    list-style: lower-alpha;
+}
+
+
+/*header*/
+
+header {
+    background-color: #00002e;
+    color: #fffdff;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    margin-left: -2rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/*main*/
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-nav p {
+    font-weight: bold;
+}
+
+.main-nav ul {
+    background-color: #f00;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    margin-left: -2rem;
+    justify-content: flex-end;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-nav a:hover,
+.main-nav a:focus-visible {
+    background-color: #fff;
+    color: #f00;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 0rem;
+}
+
+.cards li {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards li>img {
+    order: -1;
+    max-width: 100%;
+}
+
+.cards li .content {
+    padding: 0 1rem;
+    padding: 1rem;
+}
+
+.cards h3 {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.cards p {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.cards a {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.cards .overlay-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-indent: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labo 02</title>
+    <link rel="stylesheet" href="https://unkpg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,500;0,800;1,300;1,500;1,800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#introductieoefening">Introductieoefening</a>
+                    </li>
+                    <li>
+                        <a href="#columns">Columns</a>
+                    </li>
+                    <li>
+                        <a href="#nav">Nav</a>
+                    </li>
+                    <li>
+                        <a href="#cards">Cards</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <div class="container">
+            <h1>Labo 02</h1>
+            <article>
+                <h2 id="introductieoefening">introductieoefening</h2>
+                <section>
+                    <h3>Stap 1</h3>
+                    <ol>
+                        <li> Maak een nieuw project.<br>Zorg voor een index.html en een styles.css</li>
+                        <li>Schrijf alle HTML</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Stap 2</h3>
+                    <ol>
+                        <li>Voeg normalize.css toe via een link-tag in de head<br>el="stylesheet ", href="https://unkpg.com/@csstools/normalize.css "</li>
+                        <li>Voeg een google font toe in de head (<a href="https://fonts.google.com/specimen/Montserrat?query=montserrat ">Montserrat 300, 500 & 800: normaal en italic</a>)</li>
+                        <li>Koppel je eigen styles.css aan je HTML</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Stap 3: css</h3>
+                    <ol>
+                        <li>'corrigeer' de box-sizing property van alle elementen en van alle ::before en ::after pseudo-elementen. Zie theorie!</li>
+                        <li>Maak een <i>body</i> selector en pas de background color aan naar #fffdff,<br>pas de font-family aan naar Montserrat en vergeet je fallback font niet! <br>Zet de line-height op 1.6 en de margin op 0</li>
+                    </ol>
+                </section>
+                <section>
+                    <h3>Stap 4: vragen</h3>
+                    <ol class="alpha ">
+                        <li>
+                            <h4>Wat doet normalize.css?</h4>
+                            <p>
+                                normalize.css is een CSS-bestand dat zorgt voor consistente stijlen op webpagina's door standaardstijlen van browsers te corrigeren en normaliseren. Het streeft naar uniformiteit tussen browsers, behoudt nuttige standaarden, lost veelvoorkomende bugs
+                                op en verbetert de bruikbaarheid. Het is licht en wordt vaak gebruikt als startpunt voor webontwikkeling.
+                            </p>
+                        </li>
+                        <li>
+                            <h4>Wat is een fallback font, wat doet het, welk heb je gekozen en waarom?</h4>
+                            <p>Het wordt gebruikt als een alternatief lettertype in het geval dat het primaire lettertype niet beschikbaar is of niet kan worden weergegeven op het systeem van de gebruiker. Ik heb 'sans serif' gebruikt om dat dat aangeraden
+                                werd op de google website.</p>
+                        </li>
+                        <li>
+                            <h4>Waar had je bij deze oefening moeite mee?</h4>
+                            <p>De theorie van css</p>
+                        </li>
+                    </ol>
+                </section>
+            </article>
+            <article>
+                <h2 id="columns">Oefening 1: Columns</h2>
+                <div class="row">
+                    <div></div>
+                    <div></div>
+                </div>
+            </article>
+            <article>
+                <h2 id="nav">Oefening 2: Nav</h2>
+                <nav class="main-nav">
+                    <p>Portofolio of Someone</p>
+                    <ul>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Nothing</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </article>
+            <article>
+                <h2 id="cards">Oefening 3: Cards</h2>
+                <ul class="cards">
+                    <li>
+                        <div class="content">
+                            <h3>Card title 1</h3>
+                            <p>Card text Lorem ipsum dolor sit amet.</p>
+                            <a href="#">Read more about title 1</a>
+                            <a href="#" class="overlay-link">Read more about title l</a>
+                        </div>
+                        <img src="https://picsum.photos/350/150?1" alt=" ">
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Card title 2</h3>
+                            <p>Card text Lorem ipsum dolor sit amet.</p>
+                            <a href="#">Read more about title 2</a>
+                            <a href="#" class="overlay-link">Read more about title 2</a>
+                        </div>
+                        <img src="https://picsum.photos/350/150?2" alt=" ">
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Card title 3</h3>
+                            <p>Card text Lorem ipsum dolor sit amet.</p>
+                            <a href="#">Read more about title 3</a>
+                            <a href="#" class="overlay-link">Read more about title 3</a>
+                        </div>
+                        <img src="https://picsum.photos/350/150?3" alt=" ">
+                    </li>
+                    <li>
+                        <div class="content">
+                            <h3>Card title 4</h3>
+                            <p>Card text Lorem ipsum dolor sit amet.</p>
+                            <a href="#">Read more about title 4</a>
+                            <a href="#" class="overlay-link">Read more about title 4</a>
+                        </div>
+                        <img src="https://picsum.photos/350/150?4" alt=" ">
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023</p>
+    </footer>
+</body>
+
+</html>

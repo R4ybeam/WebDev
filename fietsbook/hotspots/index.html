@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspots</title>
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-heat@0.2.0/dist/leaflet-heat.css" />
+</head>
+
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <nav>
+            <a href="../">Home</a>
+            <a href="./">Hotspots</a>
+            <a href="../tools/">Tools</a>
+            <a href="../activity/">Activity</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Fietsenkaart</h2>
+        <section id="map" style="height: 400px;"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Fietsbook. All rights reserved.</p>
+    </footer>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+    <script src="../js/map.js"></script>
+</body>
+
+</html>

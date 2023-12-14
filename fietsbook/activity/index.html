@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity</title>
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="../images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <nav>
+            <a href="../">Home</a>
+            <a href="../hotspots/">Hotspots</a>
+            <a href="../tools/">Tools</a>
+            <a href="./">Activity</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Fietsbook Activity Feed</h2>
+            <div id="post-form">
+                <textarea id="post-text" placeholder="Share your activity..."></textarea>
+                <button onclick="post()">Post</button>
+            </div>
+
+            <div id="posts-container">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Fietsbook. All rights reserved.</p>
+    </footer>
+    <script src="activity.js"></script>
+</body>
+
+</html>
