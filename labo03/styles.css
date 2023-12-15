@@ -117,59 +117,88 @@ article.typografie p:last-child {
 article.shoe {
     /* Zorg dat deze gecentreerd zal worden en een maximum breedte van 30rem */
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1.5rem;
     max-width: 30rem;
     /* Stel het lettertype "open sans" in (google font) */
     font-family: 'Open Sans', serif;
     /* De afgronde hoeken zet je in met border radius, de schaduw met box-shadow */
-    border-radius: 5px;
-    box-shadow: 0px 0px 20px 0px #444;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #777;
 }
 
-
 /* Breadcrumb & update */
-
 
 /* Plaats de breadcrumb (men - shoes) en new color naast elkaar met flex. 
 Doe de nodige instellingen inzake typografie */
 
+article.shoe div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+}
+
+.breadcrumb, .update {
+    margin-top: 0;
+    font-size: 12px;
+}
+
+.breadcrumb a {
+    text-transform: uppercase;
+    color: #888;
+    margin-right: 10px;
+}
+
+.update {
+    text-transform: uppercase;
+    color: #ca8a4c;
+}
 
 /* Title & prices */
-
 
 /* De titel en de prijs ga je ook naast elkaar plaatsen met flexbox
 de prijs en de vat kan je onder elkaar plaatsen met flex-direction: column 
 Doe de nodige instellingen inzake typografie */
+article.shoe div:nth-child(2) {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+}
 
+article.shoe h1 {
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    align-self:center;
+    text-transform: uppercase;
+    font-size: 26px;
+}
+
+.price span{
+    align-self: flex-end;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #888;
+}
 
 /* Description */
 
 
 /* selecteer de paragraaf in het article, deze heeft weinig instelling buiten wat marges en een maximum breedte */
-
+article.shoe > p {
+    font-size: 16px;
+    max-width: 21rem;
+    margin: 2rem 0;
+}
 
 /* Colors */
-
-.colors ul {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 30rem;
-    padding: 0rem;
-    border: solid;
-    list-style: none;
-    gap: 0.5rem;
+.colors p {
+    font-size: 14px;
+    font-weight: bolder;
 }
-
-.colors ul {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 30rem;
-    padding: 0rem;
-    border: solid;
-    list-style: none;
-    gap: 0.5rem;
-}
-
 
 /* Maak de paragraaf met de kleurnaam correct op.
  Zet de foto's naast elkaar met flex en voorzie ruimte met gap
@@ -177,9 +206,31 @@ Doe de nodige instellingen inzake typografie */
  als achtergrond bij de foto's.
  Stel een border in op de geselecteerde foto/kleur */
 
+.colors ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 30rem;
+    padding: 0rem;
+    list-style: none;
+    gap: 2rem;
+}
+
+.colors li {
+    background-color: #eee;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+.colors li.selected {
+    background-color: #fff;
+    border: 2px solid #000;
+}
 
 /* Sizes */
 
+.sizes p {
+    font-size: 14px;
+    font-weight: bolder;
+}
 
 /* Gebruik terug Flexbox om de sizes naast elkaar te plaatsen.
 gebruik "wrap" om het grid effect te krijgen.
@@ -189,28 +240,49 @@ Via paddings kan je de knoppen groter maken. */
     display: flex;
     flex-wrap: wrap;
     max-width: 30rem;
-    padding: 0rem;
-    border: solid;
+    padding: 0;
     list-style: none;
     gap: 0.5rem;
 }
 
 .sizes li {
-    padding: 1rem 2rem;
+    width: 5rem;
+    height: 3rem;
     background-color: #eee;
+    transition: background-color 0.2s, border 0.2s;
 }
 
 .sizes li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #000;
-    font-weight: bold;
+    font-size: 15px;
+    font-weight: bolder;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
 }
 
 
 /* de lector zal ook de hover functie van dit onderdeel tonen in het labo */
-
+.sizes li:hover {
+    background-color: #fff;
+    border: 2px solid #000;
+}
 
 /* button */
 
 
 /* Om af te ronden, voorzie de opmaak van de button */
+.addToCart {
+    display: inline-flex;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 1.5rem 9rem;
+    border-radius: 50px;
+    white-space: nowrap;
+}
