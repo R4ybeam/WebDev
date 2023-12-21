@@ -1,0 +1,66 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* body */
+
+body {
+    background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* HEADER */
+
+header {
+    background-color: #00002e;
+    color: #fffdff;
+    padding-top: 0;
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav h1 { 
+    margin: 1rem 2rem;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 2rem;
+}
+
+
+nav li {
+    width: 6rem;
+    height: 3rem;
+    background-color: blue;
+    border-radius: 50px;
+}
+
+nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+}
+
+/* MAIN */
+
+/* containers */
+
+/* cards */
+
+/* FOOTER */
