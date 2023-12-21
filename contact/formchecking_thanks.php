@@ -17,58 +17,86 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <h1>Miguel Ringoot</h1>
+            <ul>
+                <li>
+                    <a href="./">Home</a>
+                </li>
+                <li>
+                    <a href="./projecten/">Projecten</a>
+                </li>
+                <li>
+                    <a href="./cv/">CV</a>
+                </li>
+                <li>
+                    <a href="./blog/">Blog</a>
+                </li>
+                <li>
+                    <a href="./contact/">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="container">
+				<?php
 
-<?php
+			// Name sent in
+			if ($name) {
+				echo '<p>Thank you ' . htmlentities($name). '</p>';
+			}
 
-	// Name sent in
-	if ($name) {
-		echo '<p>Thank you ' . htmlentities($name). '</p>';
-	}
+			// Age sent in
+			else if ($age) {
+				echo '<p>Thank you, ' . htmlentities($age). ' year old stranger</p>';
+			}
 
-	// Age sent in
-	else if ($age) {
-		echo '<p>Thank you, ' . htmlentities($age). ' year old stranger</p>';
-	}
+			// Nothing sent in
+			else {
+				echo '<p>Thank you, stranger</p>';
+			}
 
-	// Nothing sent in
-	else {
-		echo '<p>Thank you, stranger</p>';
-	}
+			?>
 
-?>
+			<div id="debug">
 
-	<div id="debug">
+			<?php
 
-<?php
+			/**
+			 * Helper Functions
+			 * ========================
+			 */
 
-	/**
-	 * Helper Functions
-	 * ========================
-	 */
-
-		/**
-		 * Dumps a variable
-		 * @param mixed $var
-		 * @return void
-		 */
-		function dump($var) {
-			echo '<pre>';
-			var_dump($var);
-			echo '</pre>';
-		}
+				/**
+				 * Dumps a variable
+				 * @param mixed $var
+				 * @return void
+				 */
+				function dump($var) {
+					echo '<pre>';
+					var_dump($var);
+					echo '</pre>';
+				}
 
 
-	/**
-	 * Main Program Code
-	 * ========================
-	 */
+			/**
+			 * Main Program Code
+			 * ========================
+			 */
 
-		// dump $_GET
-		dump($_GET);
+				// dump $_GET
+				dump($_GET);
 
-?>
+			?>
 
-	</div>
-
+			</div>
+		</section>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2023 Miguel Ringoot</p>
+    </footer>
 </body>
+
 </html>
