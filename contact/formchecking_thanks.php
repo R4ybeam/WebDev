@@ -45,7 +45,7 @@
 
 			// Name sent in
 			if ($name) {
-				echo '<p>Thank you ' . htmlentities($name). '</p>';
+				echo '<p class="formmessage">Dankjewel voor je bericht ' . htmlentities($name). '</p>';
 			}
 
 			// Age sent in
