@@ -22,19 +22,19 @@
             <h1>Miguel Ringoot</h1>
             <ul>
                 <li>
-                    <a href="./">Home</a>
+                    <a href="../">Home</a>
                 </li>
                 <li>
-                    <a href="./projecten/">Projecten</a>
+                    <a href="../projecten/">Projecten</a>
                 </li>
                 <li>
-                    <a href="./cv/">CV</a>
+                    <a href="../cv/">CV</a>
                 </li>
                 <li>
-                    <a href="./blog/">Blog</a>
+                    <a href="../blog/">Blog</a>
                 </li>
                 <li>
-                    <a href="./contact/">Contact</a>
+                    <a href="./">Contact</a>
                 </li>
             </ul>
         </nav>
@@ -59,39 +59,6 @@
 			}
 
 			?>
-
-			<div id="debug">
-
-			<?php
-
-			/**
-			 * Helper Functions
-			 * ========================
-			 */
-
-				/**
-				 * Dumps a variable
-				 * @param mixed $var
-				 * @return void
-				 */
-				function dump($var) {
-					echo '<pre>';
-					var_dump($var);
-					echo '</pre>';
-				}
-
-
-			/**
-			 * Main Program Code
-			 * ========================
-			 */
-
-				// dump $_GET
-				dump($_GET);
-
-			?>
-
-			</div>
 		</section>
     </main>
     <footer>
