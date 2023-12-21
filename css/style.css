@@ -80,6 +80,10 @@ nav a {
     border-radius: 15px;
 }
 
+.container h2 {
+    margin-top: 0;
+}
+
 /* cards */
 
 .cards {
