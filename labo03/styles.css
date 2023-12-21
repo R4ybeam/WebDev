@@ -155,6 +155,7 @@ article.shoe div:nth-child(1) {
 /* De titel en de prijs ga je ook naast elkaar plaatsen met flexbox
 de prijs en de vat kan je onder elkaar plaatsen met flex-direction: column 
 Doe de nodige instellingen inzake typografie */
+
 article.shoe div:nth-child(2) {
     display: flex;
     justify-content: space-between;

@@ -6,7 +6,7 @@
 
 body {
     background-color: #000;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     line-height: 1.6;
     margin: 0;
     color: #fff;
@@ -61,10 +61,54 @@ nav a {
 /* containers */
 .container {
     background-color: #111;
-
+    max-width: 80rem;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    border-radius: 15px;
 }
 
 /* cards */
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 0rem;
+}
+
+.cards li {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.cards li>img {
+    order: -1;
+    max-width: 100%;
+}
+
+.cards li .content {
+    padding: 0 1rem;
+    padding: 1rem;
+}
+
+.cards h3 {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+.cards p {
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.cards a {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+
 
 /* FOOTER */
 
