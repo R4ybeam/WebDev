@@ -12,6 +12,18 @@ body {
     color: #fff;
 }
 
+/* helpers */
+
+button {
+    width: 6rem;
+    height: 3rem;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #f0f, #009);
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+}
+
 /* HEADER */
 
 header {
@@ -42,7 +54,7 @@ nav ul {
 nav li {
     width: 6rem;
     height: 3rem;
-    background-color: blue;
+    background-image: linear-gradient(to bottom right, #f0f, #009);
     border-radius: 50px;
 }
 
@@ -51,6 +63,7 @@ nav a {
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    font-weight: bold;
     color: inherit;
     height: 100%;
     width: 100%;
@@ -63,7 +76,7 @@ nav a {
     background-color: #111;
     max-width: 80rem;
     margin: 1rem auto;
-    padding: 0 1rem;
+    padding: 1rem;
     border-radius: 15px;
 }
 
@@ -73,7 +86,7 @@ nav a {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    padding-left: 0rem;
+    padding: 0rem;
 }
 
 .cards li {
