@@ -5,18 +5,17 @@
 /* body */
 
 body {
-    background-color: #ffffff;
+    background-color: #000;
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     margin: 0;
+    color: #fff;
 }
 
 /* HEADER */
 
 header {
-    background-color: #00002e;
-    color: #fffdff;
-    padding-top: 0;
+    background-color: #222;
 }
 
 /* nav */
@@ -60,7 +59,21 @@ nav a {
 /* MAIN */
 
 /* containers */
+.container {
+    background-color: #111;
+
+}
 
 /* cards */
 
 /* FOOTER */
+
+footer {
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+}
+footer p {
+    
+    display: inline-block;
+}
