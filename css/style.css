@@ -15,7 +15,7 @@ body {
 /* helpers */
 
 button {
-    width: 6rem;
+    width: 10rem;
     height: 3rem;
     color: #fff;
     background-image: linear-gradient(to bottom right, #f0f, #009);
@@ -73,8 +73,10 @@ nav a {
 
 /* containers */
 .container {
+    display: flex;
+    flex-direction: column;
     background-color: #111;
-    max-width: 80rem;
+    max-width: 60rem;
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 15px;
@@ -89,7 +91,7 @@ nav a {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 5%;
     padding: 0rem;
 }
 
@@ -97,16 +99,19 @@ nav a {
     display: flex;
     flex-direction: column;
     flex: 0 1 300px;
+    background-color: #222;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 30%;
+    border-radius: 15px;
 }
 
 .cards li>img {
     order: -1;
     max-width: 100%;
+    border-radius: 15px;
 }
 
 .cards li .content {
-    padding: 0 1rem;
     padding: 1rem;
 }
 
@@ -122,10 +127,8 @@ nav a {
 
 .cards a {
     display: inline-block;
-    margin-bottom: 1rem;
+    color: #551a8b;
 }
-
-
 
 /* FOOTER */
 
@@ -134,7 +137,61 @@ footer {
     display: flex;
     justify-content: center;
 }
+
 footer p {
-    
     display: inline-block;
+}
+
+/* form */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message {
+    color: #95a5a6;
+    text-align: center;
+}
+
+.error {
+    color: #e74c3c;
+}
+
+label {
+    margin-top: 10px;
+    color: #fff;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #fff;
+    background-color: #555;
+    color: #fff;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-image: linear-gradient(to bottom right, #f0f, #009);
+    width: 6rem;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: backgound-color 0.3s ease;
+    border-radius: 50px;
+}
+
+input[type="submit"]:hover {
+    background-image: linear-gradient(to bottom right, #009, #f0f);
 }

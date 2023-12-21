@@ -37,27 +37,22 @@
     </header>
     <main>
         <section class="container">
-            <form action="">
-                <h2>Contacteer mij</h2>
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+                <h2>Testform</h2>
+                <p class="message">Alle velden zijn verplicht, tenzij anders aangegeven.</p>
+        
                 <div>
-                    <p>Uw naam</p>
-                    <input type="text">
+                    <label for="name">Jouw naam</label>
+                    <input type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
+                    <span class="message error"><?php echo $msgName; ?></span>
                 </div>
+        
                 <div>
-                    <p>Uw e-mail</p>
-                    <input type="text">
+                    <label for="message">Boodschap</label>
+                    <textarea name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>
+                    <span class="message error"><?php echo $msgMessage; ?></span>
                 </div>
-                <div>
-                    <p>Uw bericht</p>
-                    <input type="text">
-                </div>
-                <div>
-                    <p>Hoe heb je mij gevonden?</p>
-                    <p><input type="checkbox"> Vrienden</p>
-                    <p><input type="checkbox"> Social media</p>
-                    <p><input type="checkbox"> Google</p>
-                    <p><input type="checkbox"> Andere</p>
-                </div>
+        
                 <input type="submit" id="btnSubmit" name="btnSubmit" value="Verstuur"/>
             </form>
         </section>
