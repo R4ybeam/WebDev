@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="./style.css" />
 </head>
 <body>
-
+<main class="container">
 <?php
 
 	// Name sent in
@@ -30,6 +30,6 @@
 	}
 
 ?>
-
+</main>
 </body>
 </html>
