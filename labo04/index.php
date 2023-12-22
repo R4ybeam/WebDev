@@ -6,15 +6,15 @@ ini_set('display_errors', 1);
 
 // Constanten (connectie-instellingen databank)
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', 'Azerty123');
-define('DB_NAME', 'labo04');
+define('DB_USER', 'r4ybeam');
+define('DB_PASS', 'Kaprekar-6174');
+define('DB_NAME', 'portofolioform');
 
 date_default_timezone_set('Europe/Brussels');
 
 // Verbinding maken met de databank
 try {
-    $db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER);
+    $db = new PDO('mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8mb4', DB_USER, DB_PASS);
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
     echo 'Verbindingsfout: ' . $e->getMessage();
