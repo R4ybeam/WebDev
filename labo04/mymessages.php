@@ -2,9 +2,9 @@
 
 // Constanten (connectie-instellingen databank)
 define ('DB_HOST', 'localhost');
-define ('DB_USER', 'r4ybeam');
-define ('DB_PASS', 'Kaprekar-6174');
-define ('DB_NAME', 'portofolioform');
+define ('DB_USER', 'testroot');
+define ('DB_PASS', '9Xtb0h1$1');
+define ('DB_NAME', 'testform');
 
 
 date_default_timezone_set('Europe/Brussels');

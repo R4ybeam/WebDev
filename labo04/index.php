@@ -5,10 +5,10 @@ ini_set('error_reporting', E_ALL);
 ini_set('display_errors', 1);
 
 // Constanten (connectie-instellingen databank)
-define('DB_HOST', 'localhost');
-define('DB_USER', 'r4ybeam');
-define('DB_PASS', 'Kaprekar-6174');
-define('DB_NAME', 'portofolioform');
+define ('DB_HOST', 'localhost');
+define ('DB_USER', 'testroot');
+define ('DB_PASS', '9Xtb0h1$1');
+define ('DB_NAME', 'testform');
 
 date_default_timezone_set('Europe/Brussels');
 
@@ -66,7 +66,7 @@ if (isset($_POST['btnSubmit'])) {
 <head>
     <title>Testform</title>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
 </head>
 <body>
 
