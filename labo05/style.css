@@ -1,0 +1,140 @@
+*::before, *::after {box-sizing: border-box;}
+/* BODY */
+body {
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.6;
+    color: #0000A3;
+    background-color: #F4F6F6;
+    margin: 0 auto;
+    max-width: 80rem;
+    padding: 0 2rem;
+}
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 8/5;
+}
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header h2 {
+    font-weight: bolder;
+    text-transform: uppercase;
+
+}
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+}
+header li {
+    background-color: #0000A3;
+    padding: auto;
+    padding: 0 0.5rem;
+
+}
+header a {
+    color: #FFF;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+/* MAIN */
+
+.line {
+    width: 100%; height: 5px; background: #0000A3;
+    margin-top:  1rem;
+}
+
+/* sect1 */
+
+.info img {
+    padding-right: 12rem;
+}
+h1 {
+    font-size: 8rem;
+    font-variant: all-petite-caps;
+    font-weight: bold;
+    line-height: .8;
+    margin: 0;  
+    text-shadow: #FFF 5px 5px;
+    text-shadow: #ffea00  -5px -5px;
+    max-width: 25rem;
+    position: relative;
+    left: 50rem;
+}
+article {
+    margin: 8rem 0;
+    display: flex;
+    gap: 2rem;
+}
+div.card {
+    width: 18.5rem;
+}
+article div:first-of-type{
+    border: solid 5px #0000A3;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+article p:first-of-type{
+    font-weight: bold;
+}
+div a {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+
+/* sect2 */
+div.content {
+    display: flex;
+    flex-direction: column;
+}
+div.container {
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 30rem;
+    gap: 4rem;
+}
+div.image img{
+    width: 30rem;
+}
+.commentary img {
+    border: #0000A3 5px solid;
+    box-shadow: #ffea00 10px -10px;
+}
+
+/* sect3 */
+section.contact {
+    margin-bottom: 8rem;
+}
+.contact p {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+input {
+    color: #0000A3;
+    display: block;
+    border: #0000A3 3px solid;
+    background-color: #FFF;
+    border-radius: 4px;
+}
+textarea {
+    border: #0000A3 3px solid;
+    border-radius: 4px;
+}
+
+/* FOOTER */
+footer {
+    margin: 2rem 0;
+}
