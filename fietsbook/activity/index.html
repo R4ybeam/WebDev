@@ -4,33 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity</title>
-    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://unkpg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <input type="checkbox" id="menu-toggle">
     <header>
-        <img src="../images/logo.png" alt="Fietsbook logo">
+        <img src="./images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-            <a href="../">Home</a>
-            <a href="../hotspots/">Hotspots</a>
-            <a href="../tools/">Tools</a>
-            <a href="./">Activity</a>
+            <a href="./">Home</a>
+			<a href="./products/">Products</a>
+            <a href="./tools/">Tools</a>
+            <a href="./hotspots/">Hotspots</a>
+<!--        <a href="./about/">About</a> -->
+            <a href="./activity/">Activity</a>
+<!--        <a href="./contact/">Contact Us</a> -->
         </nav>
     </header>
 
     <main>
-        <section>
-            <h2>Fietsbook Activity Feed</h2>
-            <div id="post-form">
-                <textarea id="post-text" placeholder="Share your activity..."></textarea>
-                <button onclick="post()">Post</button>
+        <div class="product-title">
+			<h2>Featured Bicycles</h2>
+		</div>
+		
+        <section class="product-listing">
+            <div class="product">
+                <img src="./images/elektrische_fiets.jpg" alt="Elektrische fiets">
+                <h3>Elektrische fiets</h3>
+                <p>Product info</p>
+                <p class="price">$200</p>
+                <button>Buy now</button>
             </div>
 
-            <div id="posts-container">
-                <!-- Posts will be dynamically added here -->
+            <div class="product">
+                <img src="./images/stadsfiets1.jpg" alt="Stadsfiets">
+                <h3>Stadsfiets</h3>
+                <p>Product info</p>
+                <p class="price">$50</p>
+                <button>Buy now</button>
+            </div>
+
+            <div class="product">
+                <img src="./images/roadbike.jpg" alt="Road Bike">
+                <h3>Road Bike</h3>
+                <p>Built for speed on paved roads.</p>
+                <p class="price">$75</p>
+                <button>Buy now</button>
+            </div>
+            <div class="product">
+                <img src="./images/roadbike.jpg" alt="Road Bike">
+                <h3>Road Bike</h3>
+                <p>Built for speed on paved roads.</p>
+                <p class="price">$75</p>
+                <button>Buy now</button>
             </div>
         </section>
     </main>
@@ -38,7 +68,6 @@
     <footer>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
-    <script src="activity.js"></script>
 </body>
 
 </html>
