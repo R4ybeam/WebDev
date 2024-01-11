@@ -1,4 +1,12 @@
-*, *::before, *::after {
+* {
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
   box-sizing: border-box;
 }
 
@@ -181,7 +189,7 @@ footer {
 }
 
 #menu-toggle:checked + header #menu-icon {
-  display: block;
+  display: block; /* Keep the menu icon visible when the menu is opened */
 }
 
 body:not(.show-nav) header {
@@ -199,15 +207,9 @@ body:not(.show-nav) #menu-icon {
 }
 
 body:not(.show-nav) main {
-  padding-top: 70px;
+  padding-top: 70px; /* Adjust based on your header height */
 }
 
 #menu-toggle:not(:checked) + header nav {
   display: none;
-}
-
-@media (max-width: 768px) {
-    .product {
-        width: 45%;
-    }
 }
