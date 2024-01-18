@@ -22,8 +22,10 @@ try {
 }
 
 $name = isset($_POST['name']) ? (string)$_POST['name'] : '';
+$name = isset($_POST['email']) ? (string)$_POST['email'] : '';
 $message = isset($_POST['message']) ? (string)$_POST['message'] : '';
 $msgName = '';
+$msgEmail = '';
 $msgMessage = '';
 
 // form is sent: perform formchecking!
@@ -33,7 +35,11 @@ if (isset($_POST['btnSubmit'])) {
 
     // name not empty
     if (trim($name) === '') {
-        $msgName = 'Gelieve een naam in te voeren';
+        $msgName = 'Gelieve je naam in te voeren';
+        $allOk = false;
+    }
+    if (trim($email) === '') {
+        $msgEmail = 'Gelieve je e-mail in te voeren';
         $allOk = false;
     }
 
@@ -100,7 +106,7 @@ if (isset($_POST['btnSubmit'])) {
     <main>
         <section class="container">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <h2>Testform</h2>
+                <h2>Conatctform</h2>
                 <p class="message">Alle velden zijn verplicht, tenzij anders aangegeven.</p>
         
                 <div>
@@ -108,7 +114,11 @@ if (isset($_POST['btnSubmit'])) {
                     <input type="text" id="name" name="name" value="<?php echo $name; ?>" class="input-text"/>
                     <span class="message error"><?php echo $msgName; ?></span>
                 </div>
-        
+                <div>
+                    <label for="email">Jouw e-mail</label>
+                    <input type="text" id="email" name="email" value="<?php echo $email; ?>" class="input-text"/>
+                    <span class="message error"><?php echo $msgEmail; ?></span>
+                </div>
                 <div>
                     <label for="message">Boodschap</label>
                     <textarea name="message" id="message" rows="5" cols="40"><?php echo $message; ?></textarea>

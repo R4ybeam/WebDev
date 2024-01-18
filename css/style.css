@@ -22,6 +22,10 @@ button {
     border-radius: 50px;
     border: none;
     font-weight: bold;
+    
+}
+button:hover {
+    cursor: pointer;
 }
 .formmessage {
     display: flex;
@@ -194,8 +198,4 @@ input[type="submit"] {
     cursor: pointer;
     transition: backgound-color 0.3s ease;
     border-radius: 50px;
-}
-
-input[type="submit"]:hover {
-    background-image: linear-gradient(to bottom right, #009, #f0f);
 }

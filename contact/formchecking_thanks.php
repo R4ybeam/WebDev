@@ -48,10 +48,6 @@
 				echo '<p class="formmessage">Dankjewel voor je bericht ' . htmlentities($name). '</p>';
 			}
 
-			// Age sent in
-			else if ($age) {
-				echo '<p>Thank you, ' . htmlentities($age). ' year old stranger</p>';
-			}
 
 			// Nothing sent in
 			else {
