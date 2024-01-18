@@ -120,7 +120,7 @@ nav a {
 }
 
 .cards li .content {
-    padding: 1rem;
+    padding: 0 1rem ;
 }
 
 .cards h3 {
@@ -136,6 +136,11 @@ nav a {
 .cards a {
     display: inline-block;
     color: #551a8b;
+    margin-bottom: 0.5rem;
+}
+
+section > img {
+    max-width: 50%;
 }
 
 /* FOOTER */
