@@ -22,7 +22,7 @@ try {
 }
 
 $name = isset($_POST['name']) ? (string)$_POST['name'] : '';
-$name = isset($_POST['email']) ? (string)$_POST['email'] : '';
+$email = isset($_POST['email']) ? (string)$_POST['email'] : '';
 $message = isset($_POST['message']) ? (string)$_POST['message'] : '';
 $msgName = '';
 $msgEmail = '';
