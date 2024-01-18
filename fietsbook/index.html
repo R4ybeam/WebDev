@@ -68,6 +68,18 @@
     <footer>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
+    <script>
+        let lastScrollTop = 0;
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                document.querySelector('header').style.backgroundColor = `rgba(228, 77, 38, ${Math.max(0, 1 - scrollTop / 200)})`;
+            } else {
+                document.querySelector('header').style.backgroundColor = `rgba(228, 77, 38, ${Math.min(1, 1 - scrollTop / 200)})`;
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 
 </html>
