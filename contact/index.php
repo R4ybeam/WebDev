@@ -50,7 +50,7 @@ if (isset($_POST['btnSubmit'])) {
 
     // end of form check. If $allOk still is true, then the form was sent in correctly
     if ($allOk) {
-        $stmt = $db->exec('INSERT INTO messages (sender, message, added_on) VALUES (\'' . $name . '\',\'' . $message . '\',\'' . (new DateTime())->format('Y-m-d H:i:s') . '\')');
+        $stmt = $db->exec('INSERT INTO messages (sender, message, added_on) VALUES (\'' . $name . '\',\'' . $email . '\',\'' . $message . '\',\'' . (new DateTime())->format('Y-m-d H:i:s') . '\')');
 
         // the query succeeded, redirect to this very same page
         if ($db->lastInsertId() !== 0) {
