@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -12,12 +12,28 @@
 <body>
     <input type="checkbox" id="menu-toggle">
     <header>
+        <div class="language-toggle">
+            <div class="dropdown">
+                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
+                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="language-btn">Language</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setLanguage('en')">English</a>
+                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
+                </div>
+            </div>
+        </div>
         <img src="./images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
             <a href="./">Home</a>
-	    <a href="./products/">Products</a>
+			<a href="./products/">Products</a>
             <a href="./tools/">Tools</a>
             <a href="./hotspots/">Hotspots</a>
             <a href="./about/">About</a>
@@ -28,8 +44,8 @@
 
     <main>
         <div class="product-title">
-		<h2>Featured Bicycles</h2>
-	</div>
+			<h2>Featured Bicycles</h2>
+		</div>
 		
         <section class="product-listing">
             <div class="product">
@@ -68,21 +84,38 @@
     <footer>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
+
     <script>
         let lastScrollTop = 0;
+
         window.addEventListener("scroll", function () {
             let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            let header = document.querySelector('header');
+
             if (document.getElementById('menu-toggle').checked) {
-                document.getElementById('menu-toggle').checked = false;
+               document.getElementById('menu-toggle').checked = false;
             }
-            if (scrollTop > lastScrollTop) {
-                document.querySelector('header').style.backgroundColor = `rgba(228, 77, 38, ${Math.max(0, 1 - scrollTop / 200)})`;
-            } else {
-                document.querySelector('header').style.backgroundColor = `rgba(228, 77, 38, ${Math.min(1, 1 - scrollTop / 200)})`;
-            }
+    
+            let headerOpacity = Math.min(1, 1 - scrollTop / 200);
+            header.style.backgroundColor = `rgba(228, 77, 38, ${headerOpacity})`;
+
+            let buttons = document.querySelectorAll('.dropbtn');
+            buttons.forEach(button => {
+                let buttonOpacity = Math.min(1, 1 - scrollTop / 200);
+                button.style.backgroundColor = `rgba(111, 34, 50, ${buttonOpacity})`;
+            });
+
             lastScrollTop = scrollTop;
         });
-    </script>
+
+        function setLanguage(lang) {
+            console.log("Language switched to: " + lang);
+        }
+
+        function setColorScheme(scheme) {
+            console.log("Color scheme switched to: " + scheme);
+        }
+    </script>    
 </body>
 
 </html>
