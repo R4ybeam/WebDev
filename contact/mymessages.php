@@ -34,7 +34,7 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <?php if (sizeof($items) > 0) { ?>
     <ul>
         <?php foreach ($items as $item) { ?>
-        <li><?php echo $item['sender']; ?>: <?php echo $item['message']; ?> (<?php echo (new Datetime($item['added_on']))->format('d-m-Y H:i:s'); ?>)</li>
+        <li><?php echo $item['sender']; ?>: <?php echo $item['email']; ?><?php echo $item['message']; ?> (<?php echo (new Datetime($item['added_on']))->format('d-m-Y H:i:s'); ?>)</li>
         <?php } ?>
     </ul>
     <?php
