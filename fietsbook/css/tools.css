@@ -1,0 +1,9 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+
+
+.product-listing {
+    list-style: none;
+}
