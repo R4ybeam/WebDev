@@ -68,6 +68,7 @@ if (isset($_POST['btnSubmit'])) {
     }
 
 }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
