@@ -2,6 +2,20 @@
 	box-sizing: border-box;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    max-width: 60rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+.container h2 {
+    margin-top: 0;
+}
+
 form {
     display: flex;
     flex-direction: column;
