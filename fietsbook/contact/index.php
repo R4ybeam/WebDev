@@ -102,7 +102,7 @@ if (isset($_POST['btnSubmit'])) {
     <main>
         <section class="container">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-                <h2>Conatctform</h2>
+                <h2>Contactform</h2>
                 <p class="message">Alle velden zijn verplicht, tenzij anders aangegeven.</p>
         
                 <div>
