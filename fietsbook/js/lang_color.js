@@ -27,7 +27,7 @@ let lastScrollTop = 0;
         function setColorScheme(scheme) {
             console.log("Color scheme switched to: " + scheme);
         }
-
+/*
         const checkbox = document.getElementById('menu-toggle');
         const YChangeMain = document.getElementById('MAIN');
         
@@ -44,3 +44,5 @@ let lastScrollTop = 0;
             
           }
         });
+    ALS MENU NIMEER WERKT ZET TERUG AAN
+*/

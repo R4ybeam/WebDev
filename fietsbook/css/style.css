@@ -79,8 +79,8 @@
   }
   /*--------------------------MAIN--------------------------*/
   main {
-    margin: 20px;
-    transition: margin 0.3s ease;
+    /*margin: 20px;
+    transition: margin 0.3s ease;     ALS MENU NIMEER WERKT ZET AAN*/
   }
   
   .product-title {
@@ -93,8 +93,8 @@
     color: #fff;
     text-align: center;
     padding: 10px;
-    margin: 20px; 
-    transition: margin 0.3s ease;
+    /*margin: 20px; 
+    transition: margin 0.3s ease;     ALS MENU NIMEER WERKT ZET AAN*/
   }
   
   .product-listing {
@@ -181,10 +181,11 @@
     background-color: #555;
     
   }
-
+  /*
   #menu-toggle {
     margin: 10px;
   }
+  ALS MENU TERUG NIMEER WERKT*/
 
   #menu-toggle:not(:checked) + header #menu-icon {
     display: block;
