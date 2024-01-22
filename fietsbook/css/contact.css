@@ -35,7 +35,7 @@ form {
 
 label {
     margin-top: 10px;
-    color: #fff;
+    color: #555;
 }
 
 input[type="text"],
@@ -44,9 +44,9 @@ textarea {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 15px;
-    border: 1px solid #fff;
-    background-color: #555;
-    color: #fff;
+    border: 1px solid #555;
+    background-color: #fff;
+    color: #555;
     border-radius: 15px;
     box-sizing: border-box;
 }
@@ -59,7 +59,7 @@ input[type="submit"] {
     box-sizing: border-box;
     border: none;
     font-weight: bold;
-    color: #fff;
+    color: #555;
     cursor: pointer;
     transition: backgound-color 0.3s ease;
     border-radius: 50px;
