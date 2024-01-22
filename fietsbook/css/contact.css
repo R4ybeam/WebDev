@@ -64,3 +64,17 @@ input[type="submit"] {
     transition: backgound-color 0.3s ease;
     border-radius: 50px;
 }
+
+button {
+    width: 10rem;
+    height: 3rem;
+    color: #555;
+
+    border-radius: 50px;
+    border: none;
+    font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
+}
