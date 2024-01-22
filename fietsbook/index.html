@@ -65,14 +65,14 @@
             </div>
 
             <div class="product">
-                <img src="./images/roadbike.jpg" alt="Road Bike">
+                <img src="./images/roadbike1.jpg" alt="Road Bike">
                 <h3>Road Bike</h3>
                 <p>Built for speed on paved roads.</p>
                 <p class="price">$75</p>
                 <button>Buy now</button>
             </div>
             <div class="product">
-                <img src="./images/roadbike.jpg" alt="Road Bike">
+                <img src="./images/roadbike2.jpg" alt="Road Bike">
                 <h3>Road Bike</h3>
                 <p>Built for speed on paved roads.</p>
                 <p class="price">$75</p>
@@ -108,7 +108,7 @@
             }
     
             let headerOpacity = Math.min(1, 1 - scrollTop / 200);
-            header.style.backgroundColor = `rgba(64,90,77, ${headerOpacity})`;
+            header.style.backgroundColor = `rgba(228, 77, 38, ${headerOpacity})`;
 
             let buttons = document.querySelectorAll('.dropbtn');
             buttons.forEach(button => {
@@ -126,9 +126,6 @@
         function setColorScheme(scheme) {
             console.log("Color scheme switched to: " + scheme);
         }
-        document.getElementById('menu-toggle').addEventListener('change', function () {
-            document.body.classList.toggle('show-nav', this.checked);
-        });
     </script>    
 </body>
 
