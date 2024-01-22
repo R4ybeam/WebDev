@@ -16,11 +16,15 @@
     padding: 0;
     background-color: #f4f4f4;
   }
+  /*-------------------------HEADER-------------------------*/
+  input{
+    display: none;
+  }
   
   header {
     background-color: #4a6e7a;
     color: #fff;
-    padding: 10px;
+    padding: 0;
     text-align: center;
     position: relative;
     width: 100%;
@@ -73,9 +77,9 @@
   nav a:hover {
     background-color: #555;
   }
-  
+  /*--------------------------MAIN--------------------------*/
   main {
-    padding: 1rem;
+    padding: 17rem 1rem 1rem 1rem;
     margin: 1rem;
   }
   
@@ -153,7 +157,7 @@
     background-color: #444;
     color: #fff;
     padding: 5px;
-    position: fixed;
+    
     top: 0;
     width: 100%;
     z-index: 999;
@@ -186,14 +190,17 @@
   
   #menu-toggle:checked + header {
     background-color: #444;
+    
   }
   
   #menu-toggle:checked + header #menu-icon {
     display: block; /* Keep the menu icon visible when the menu is opened */
   }
   
+  
+
   body:not(.show-nav) header {
-    position: fixed;
+    /*position: fixed;*/
     width: 100%;
     background-color: #4a6e7a;
     color: #fff;
@@ -205,11 +212,12 @@
   body:not(.show-nav) #menu-icon {
     display: block;
   }
-  
+  /*
   body:not(.show-nav) main {
-    padding-top: 70px;
+    padding-top: rem;
   }
-  
+  Da overwrite die padding van main eig dus drm zouk verwijdere fz*/
+
   #menu-toggle:not(:checked) + header nav {
     display: none;
   }
