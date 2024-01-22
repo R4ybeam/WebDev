@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/voorwaarden.css">
+    <title>Privacybeleid Fietsbook</title>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+    <header class="marge">
+        <div class="language-toggle">
+            <div class="dropdown">
+                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
+                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="language-btn">Language</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setLanguage('en')">English</a>
+                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
+                </div>
+            </div>
+        </div>
+        <img src="./images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <nav>
+            <a href="../">Home</a>
+			<a href="../products/">Products</a>
+            <a href="../tools/">Tools</a>
+            <a href="../hotspots/">Hotspots</a>
+            <a href="../about/">About</a>
+            <a href="../activity/">Activity</a>
+            <a href="../contact/">Contact Us</a>
+        </nav>
+    </header>
+    <main class="bruh">
+
+        <h1>Privacybeleid Fietsbook</h1>
+
+        <p>Dit privacybeleid is van toepassing op de informatie die wordt verzameld door Fietsbook via onze website en gerelateerde diensten. Bij het gebruik van Fietsbook gaat u akkoord met de voorwaarden van dit privacybeleid.</p>
+
+        <h2>Verzamelde informatie</h2>
+
+        <h3>Persoonlijke informatie</h3>
+        <p>Bij het registreren op Fietsbook kunnen wij persoonlijke informatie verzamelen, zoals uw naam, e-mailadres en andere identificatiegegevens. We verzamelen deze informatie alleen wanneer u deze vrijwillig verstrekt.</p>
+
+        <h3>Niet-persoonlijke informatie</h3>
+        <p>Wij kunnen automatisch bepaalde informatie verzamelen wanneer u onze website bezoekt, zoals uw IP-adres, het type browser dat u gebruikt, de pagina's die u hebt bezocht en andere statistieken met betrekking tot uw gebruik van onze website.</p>
+
+        <h2>Gebruik van informatie</h2>
+        <p>Wij gebruiken de verzamelde informatie voor de volgende doeleinden:</p>
+        <ul>
+            <li>Het leveren en verbeteren van onze diensten.</li>
+            <li>Het personaliseren van de gebruikerservaring.</li>
+            <li>Het beheren van uw account en het verstrekken van klantenondersteuning.</li>
+            <li>Het versturen van periodieke e-mails met betrekking tot uw account of andere producten en diensten.</li>
+        </ul>
+
+        <h2>Beveiliging</h2>
+        <p>Wij nemen redelijke maatregelen om de verstrekte persoonlijke informatie te beschermen tegen ongeautoriseerde toegang, gebruik of openbaarmaking.</p>
+
+        <h2>Cookies</h2>
+        <p>Fietsbook maakt gebruik van cookies om de gebruikerservaring te verbeteren. U kunt ervoor kiezen om cookies uit te schakelen via uw browserinstellingen, maar houd er rekening mee dat sommige functies van de website mogelijk niet goed werken.</p>
+
+        <h2>Delen van informatie</h2>
+        <p>Wij delen uw persoonlijke informatie niet met derden, behalve zoals hieronder beschreven of met uw toestemming.</p>
+
+        <h2>Wijzigingen in het privacybeleid</h2>
+        <p>Fietsbook behoudt zich het recht voor om dit privacybeleid op elk moment te wijzigen. Het is uw verantwoordelijkheid om op de hoogte te blijven van eventuele wijzigingen.</p>
+
+        <h2>Contact</h2>
+        <p>Als u vragen heeft over ons privacybeleid, neem dan contact met ons op via <a href="mailto:contact@fietsbook.com">contact@fietsbook.com</a>.</p>
+    </main>
+    <footer>
+        <section>
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="../voorwaarden/index.html">Privacy Policy</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="">Useful links</a></li>
+                    <li><a href="../service/index.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </section>
+        <p>&copy; 2023 Fietsbook. All rights reserved.</p>
+    </footer>
+    <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            let header = document.querySelector('header');
+
+            if (document.getElementById('menu-toggle').checked) {
+               document.getElementById('menu-toggle').checked = false;
+            }
+    
+            let headerOpacity = Math.min(1, 1 - scrollTop / 200);
+            header.style.backgroundColor = `rgba(64,90,77, ${headerOpacity})`;
+
+            let buttons = document.querySelectorAll('.dropbtn');
+            buttons.forEach(button => {
+                let buttonOpacity = Math.min(1, 1 - scrollTop / 200);
+                button.style.backgroundColor = `rgba(111, 34, 50, ${buttonOpacity})`;
+            });
+
+            lastScrollTop = scrollTop;
+        });
+
+        function setLanguage(lang) {
+            console.log("Language switched to: " + lang);
+        }
+
+        function setColorScheme(scheme) {
+            console.log("Color scheme switched to: " + scheme);
+        }
+        document.getElementById('menu-toggle').addEventListener('change', function () {
+            document.body.classList.toggle('show-nav', this.checked);
+        });
+    </script>  
+</body>
+
+
+</html>

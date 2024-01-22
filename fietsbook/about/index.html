@@ -28,12 +28,81 @@
     </header>
 
     <main>
-        <h1>About us:</h1>
+        <h2>Welkom bij fietsbook</h2>
+        <p>Bij FietsBook geloven we in de kracht van de fiets als een duurzaam, gezond en plezierig vervoermiddel.
+            Ons platform is niet zomaar een plek waar je fietsen kunt kopen, maar een community die fietsliefhebbers 
+            samenbrengt om voordelige deals te vinden en tweedehands fietsen een nieuw leven te geven.</p>
+        <h2>Onze Missie: Fietsen Toegankelijk Maken voor Iedereen</h2>
+        <p>Bij FietsBook streven we ernaar om fietsen toegankelijk te maken voor iedereen, ongeacht hun budget. 
+            We begrijpen dat een goede fiets een investering is, en daarom hebben we FietsBook opgericht - jouw one-stop-bestemming
+             voor betaalbare fietsen en geweldige koopjes.</p>
+        <h2>Wat maakt ons uniek</h2>
+        <ol>
+            <li>Gemeenschap van fietsliefhebbers <p>FietsBook is meer dan een marktplaats. Het is een gemeenschap van gelijkgestemde fietsliefhebbers die hun passie voor fietsen delen. Leer van anderen, 
+            deel jouw ervaringen en ontmoet mede-fietsers.</p></li>
+            <li>Groot aanbod <p>Of je nu op zoek bent naar een gloednieuwe fiets of een betrouwbare tweedehands optie, FietsBook heeft het allemaal. Blader door ons diverse aanbod en
+            vind de perfecte fiets die bij jouw behoeften en stijl past.</p></li>
+            <li>Betrouwbaarheid en kwaliteit <p>Bij FietsBook waarderen we kwaliteit en betrouwbaarheid. Onze verkopers worden zorgvuldig geselecteerd, 
+            en we streven ernaar om transparantie te bieden over de staat van de aangeboden fietsen.
+            Jouw tevredenheid staat voorop.</p></li>
+        </ol>
+        <h2>Hoe werkt fietsbook</h2>
+        <ol>
+        <li>Blader en ontdek <p>Bekijk ons uitgebreide assortiment fietsen. Van stadsfietsen tot mountainbikes, we hebben voor elk wat wils.</p></li>
+        <li>Plaats zoeken <p>Vind eenvoudig de beste plekken om betaalbare fietsen te kopen in jouw omgeving of ontdek geweldige tweedehands deals.</p></li>
+        <li>Verbind met verkopers <p>Neem rechtstreeks contact op met verkopers, stel vragen en maak veilige afspraken om jouw droomfiets te bemachtigen.</p></li>
+        </ol>
+        <p>Bij FietsBook geloven we dat elke fiets een verhaal heeft, en we willen jou helpen het jouwe te ontdekken. Sluit je aan bij onze gemeenschap en ontdek de eindeloze mogelijkheden van FietsBook!</p>
     </main>
 
     <footer>
+        <section>
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Useful links</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
+    <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            let scrollTop = window.scrollY || document.documentElement.scrollTop;
+            let header = document.querySelector('header');
+
+            if (document.getElementById('menu-toggle').checked) {
+               document.getElementById('menu-toggle').checked = false;
+            }
+    
+            let headerOpacity = Math.min(1, 1 - scrollTop / 200);
+            header.style.backgroundColor = `rgba(64,90,77, ${headerOpacity})`;
+
+            let buttons = document.querySelectorAll('.dropbtn');
+            buttons.forEach(button => {
+                let buttonOpacity = Math.min(1, 1 - scrollTop / 200);
+                button.style.backgroundColor = `rgba(111, 34, 50, ${buttonOpacity})`;
+            });
+
+            lastScrollTop = scrollTop;
+        });
+
+        function setLanguage(lang) {
+            console.log("Language switched to: " + lang);
+        }
+
+        function setColorScheme(scheme) {
+            console.log("Color scheme switched to: " + scheme);
+        }
+        document.getElementById('menu-toggle').addEventListener('change', function () {
+            document.body.classList.toggle('show-nav', this.checked);
+        });
+    </script> 
 </body>
 
 </html>

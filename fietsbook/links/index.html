@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotspots</title>
-    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-heat@0.2.0/dist/leaflet-heat.css" />
-    <link rel="stylesheet" href="../css/hotspots.css">
+    <link rel="stylesheet" href="../css/links.css">
+    <title>Tweedehands Fiets Tips</title>
 </head>
 
 <body>
@@ -20,37 +17,49 @@
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
             <a href="../">Home</a>
-	        <a href="../products/">Products</a>
+			<a href="../products/">Products</a>
             <a href="../tools/">Tools</a>
-            <a href="./">Hotspots</a>
-            <a href="../about/">About</a>
+            <a href="../hotspots/">Hotspots</a>
+            <a href="./">About</a>
             <a href="../activity/">Activity</a>
             <a href="../contact/">Contact Us</a>
         </nav>
     </header>
-
     <main>
-        <h2>Fietsenkaart</h2>
-        <section id="map" style="height: 400px;"></section>
-    </main>
+        <h1>Tweedehands Fiets Tips</h1>
+        <h2>Waar Op Te Letten Bij Het Kopen van een Tweedehands Fiets:</h2>
+        <ul>
+            <li>Controleer de algemene staat van de fiets, inclusief frame, wielen en remmen.</li>
+            <li>Zorg ervoor dat de fiets de juiste maat heeft voor jouw lengte.</li>
+            <li>Vraag naar de onderhoudsgeschiedenis van de fiets.</li>
+            <li>Controleer de versnellingen en remmen op soepelheid en efficiëntie.</li>
+            <li>Kijk naar eventuele tekenen van roest of beschadigingen.</li>
+            <li>Test de verlichting en andere accessoires indien aanwezig.</li>
+        </ul>
+        <h2>Handige Tweedehands Fiets Websites:</h2>
+        <ul class="gebruikt">
+            <li><a href="https://www.marktplaats.nl/">Marktplaats</a></li>
+            <li><a href="https://www.2dehands.be/">2dehands</a></li>
+            <li><a href="https://www.facebook.com/marketplace/category/fietsen">Facebook Marketplace</a></li>
+            <li><a href="https://bikemarkt.mtb-news.de/">Bikemarkt</a></li>
+            <li><a href="https://www.decathlon.nl/browse/c0-sporten/c1-fietsen/c3-tweedehands-fietsen/_/N-1fr6nnv">Decathlon Tweedehands Fietsen</a></li>
+        </ul>
 
+        </main>
     <footer>
         <section>
             <div class="bottom-nav">
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Useful links</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="../voorwaarden/index.html">Privacy Policy</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../contact/index.html">Contact</a></li>
+                    <li><a href="">Useful links</a></li>
+                    <li><a href="../service/index.html">Terms of Service</a></li>
                 </ul>
             </div>
         </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
-    <script src="../js/map.js"></script>
     <script>
         let lastScrollTop = 0;
 
@@ -84,7 +93,7 @@
         document.getElementById('menu-toggle').addEventListener('change', function () {
             document.body.classList.toggle('show-nav', this.checked);
         });
-    </script>    
+    </script> 
 </body>
 
 </html>

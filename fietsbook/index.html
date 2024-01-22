@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
+<body class="show-nav">
     <input type="checkbox" id="menu-toggle">
     <header>
         <div class="language-toggle">
@@ -82,6 +82,17 @@
     </main>
 
     <footer>
+        <section>
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Useful links</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
 
@@ -97,7 +108,7 @@
             }
     
             let headerOpacity = Math.min(1, 1 - scrollTop / 200);
-            header.style.backgroundColor = `rgba(228, 77, 38, ${headerOpacity})`;
+            header.style.backgroundColor = `rgba(64,90,77, ${headerOpacity})`;
 
             let buttons = document.querySelectorAll('.dropbtn');
             buttons.forEach(button => {
@@ -115,6 +126,9 @@
         function setColorScheme(scheme) {
             console.log("Color scheme switched to: " + scheme);
         }
+        document.getElementById('menu-toggle').addEventListener('change', function () {
+            document.body.classList.toggle('show-nav', this.checked);
+        });
     </script>    
 </body>
 

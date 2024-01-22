@@ -48,7 +48,7 @@
   }
   
   nav {
-    background-color: #444;
+    background-color: #4a6e7a;
     display: flex;
     justify-content: center;
     padding: 5px;
@@ -72,6 +72,7 @@
   
   nav a:hover {
     background-color: #555;
+    color: rgba(255, 255, 255, 0.524);
   }
   
   main {
@@ -132,7 +133,7 @@
   }
   
   .product button {
-    background-color: #4a6e7a;
+    background-color: #4a6e7a ;
     color: #fff;
     padding: 6px 12px;
     border: none;
@@ -175,6 +176,32 @@
   .temp-nav a:hover {
     background-color: #555;
   }
+  #menu-toggle {
+    display: none;
+}
+
+#menu-icon {
+    display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: fixed;
+    top: 5%;
+    left: 10px;
+    z-index: 1100;
+}
+
+#menu-toggle:checked + header #menu-icon {
+    display: none;
+}
+
+#menu-toggle:checked + header nav {
+    display: flex;
+    z-index: 1100;
+}
+
+body.show-nav main {
+    padding-top: 70px;
+}
   
   #menu-toggle:not(:checked) + header #menu-icon {
     display: block;
@@ -190,6 +217,7 @@
   
   #menu-toggle:checked + header #menu-icon {
     display: block; /* Keep the menu icon visible when the menu is opened */
+    margin-bottom: 6rem;
   }
   
   body:not(.show-nav) header {
@@ -204,6 +232,7 @@
   
   body:not(.show-nav) #menu-icon {
     display: block;
+
   }
   
   body:not(.show-nav) main {
@@ -213,3 +242,40 @@
   #menu-toggle:not(:checked) + header nav {
     display: none;
   }
+
+  .bottom-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bottom-nav li {
+    margin: 2rem 10px;
+  }
+  
+  .bottom-nav a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: ease 0.3s;
+  }
+
+  .bottom-nav a:hover {
+    color: rgba(255, 255, 255, 0.524);
+  
+  }
+  
+  .bottom-nav {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  body.show-nav .temp-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.show-nav main {
+    margin-bottom: 150px; /* Adjust the margin size as needed */
+}
