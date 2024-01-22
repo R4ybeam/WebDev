@@ -27,3 +27,20 @@ let lastScrollTop = 0;
         function setColorScheme(scheme) {
             console.log("Color scheme switched to: " + scheme);
         }
+
+        const checkbox = document.getElementById('menu-toggle');
+        const YChangeMain = document.getElementById('MAIN');
+        
+    
+        checkbox.addEventListener('change', function() {
+          if (checkbox.checked) {
+            // Checkbox is checked, override the margin
+            YChangeMain.style.margin = '12rem 1rem 1rem 1rem';
+            
+            
+          } else {
+            // Checkbox is unchecked, revert to the original margin
+            YChangeMain.style.margin = '';
+            
+          }
+        });
