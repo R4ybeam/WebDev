@@ -43,6 +43,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Register</title>
 </head>
 <body>
+<input type="checkbox" id="menu-toggle">
+    <header>
+        <img src="../images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <nav>
+            <a href="../">Home</a>
+			<a href="../products/">Products</a>
+            <a href="../tools/">Tools</a>
+            <a href="../hotspots/">Hotspots</a>
+            <a href="../about/">About</a>
+            <a href="./">Activity</a>
+            <a href="../contact/">Contact Us</a>
+        </nav>
+    </header>
 
     <h2>Register</h2>
 
@@ -61,6 +76,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 
     <p>Already have an account? <a href="login.php">Login here</a></p>
-
+    <footer>
+        <section>
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Useful links</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </section>
+        <p>&copy; 2023 Fietsbook. All rights reserved.</p>
+    </footer>
+    <script src="../js/lang_color.js"></script> 
 </body>
 </html>
