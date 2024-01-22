@@ -60,6 +60,7 @@
     <footer>
         <p>Copyright &copy; 2023 Miguel Ringoot</p>
     </footer>
+    <script src="../js/lang_color.js"></script>  
 </body>
 
 </html>

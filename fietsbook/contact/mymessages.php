@@ -42,4 +42,5 @@ $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         echo '<p>Nog geen berichten ontvangen.</p>' . PHP_EOL;
     }
     ?>
+    <script src="../js/lang_color.js"></script>  
 </body>

@@ -140,6 +140,7 @@ if (isset($_POST['btnSubmit'])) {
         </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
+    <script src="../js/lang_color.js"></script>  
 </body>
 
 </html>
