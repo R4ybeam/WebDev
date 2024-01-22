@@ -65,7 +65,12 @@ $result = $conn->query($query);
 
     <?php
     while ($row = $result->fetch_assoc()) {
-        echo "<p>{$row['content']}</p>";
+        $postId = $row['id'];
+        $authorUsername = $row['author_username'];
+        $content = $row['content'];
+        $createdAt = $row['created_at'];
+
+        echo "<p><strong>{$authorUsername}</strong> posted on {$createdAt}:<br>{$content}</p>";
     }
     ?>
 
