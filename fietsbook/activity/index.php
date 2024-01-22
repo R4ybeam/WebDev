@@ -19,7 +19,10 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Display posts
-$query = "SELECT * FROM posts ORDER BY created_at DESC";
+$query = "SELECT posts.*, users.username AS author_username
+          FROM posts
+          INNER JOIN users ON posts.user_id = users.id
+          ORDER BY posts.created_at DESC";
 $result = $conn->query($query);
 ?>
 
