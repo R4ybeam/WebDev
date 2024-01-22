@@ -1,3 +1,21 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 }
+
+header {
+	margin-bottom: 10rem;
+    height: 10rem;
+}
+
+h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+h2 {
+    color: #4a6e7a;
+}
+main {
+    height: 100%;
+}
