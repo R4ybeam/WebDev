@@ -17,9 +17,10 @@
     background-color: #f4f4f4;
   }
   /*-------------------------HEADER-------------------------*/
-  input{
+  header input{
     display: none;
   }
+  /* shit fuckte met contactform, als de header fuckt is mss de 'header' er uit halen */
   
   header {
     background-color: #4a6e7a;

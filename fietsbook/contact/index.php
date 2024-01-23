@@ -42,7 +42,7 @@ if (isset($_POST['btnSubmit'])) {
         $msgEmail = 'Gelieve je e-mail in te voeren';
         $allOk = false;
     }
-    if (str_contains($email, '.') === false and str_contains($email, '@') === false) {
+    if (str_contains($email, '.') === false or str_contains($email, '@') === false) {
         $msgEmail = 'Gelieve een geldige e-mail in te voeren';
         $allOk = false;
     }
