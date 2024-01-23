@@ -9,7 +9,7 @@ let lastScrollTop = 0;
             }
     
             let headerOpacity = Math.min(1, 1 - scrollTop / 200);
-            header.style.backgroundColor = `rgba(228, 77, 38, ${headerOpacity})`;
+            header.style.backgroundColor = `rgba(74, 110, 122, ${headerOpacity})`;
 
             let buttons = document.querySelectorAll('.dropbtn');
             buttons.forEach(button => {
