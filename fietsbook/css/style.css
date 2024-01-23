@@ -17,7 +17,7 @@
     background-color: #f4f4f4;
   }
   /*-------------------------HEADER-------------------------*/
-  header input{
+  input.menu-toggle {
     display: none;
   }
   /* shit fuckte met contactform, als de header fuckt is mss de 'header' er uit halen */
