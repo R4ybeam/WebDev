@@ -61,18 +61,18 @@ input[type="submit"] {
     font-weight: bold;
     color: #555;
     cursor: pointer;
-    transition: backgound-color 0.3s ease;
     border-radius: 50px;
+    transition: background-color 0.3s ease;
 }
 
 button {
     width: 10rem;
     height: 3rem;
     color: #555;
-
     border-radius: 50px;
     border: none;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 button:hover {
