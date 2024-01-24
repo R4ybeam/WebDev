@@ -45,12 +45,12 @@ $result = $conn->query($query);
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-                <a href="./">Home</a>
-                <a href="./tools/">Tools</a>
-                <a href="./hotspots/">Hotspots</a>
-                <a href="./about/">About</a>
-                <a href="./activity/">Activity</a>
-                <a href="./contact/">Contact Us</a>
+                <a href="../">Home</a>
+                <a href="../tools/">Tools</a>
+                <a href="../hotspots/">Hotspots</a>
+                <a href="../about/">About</a>
+                <a href=".//">Activity</a>
+                <a href="../contact/">Contact Us</a>
   
         </nav>
     </header>
