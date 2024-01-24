@@ -38,20 +38,36 @@ $result = $conn->query($query);
     <link rel="stylesheet" href="../css/activity.css">
 </head>
 
-<body>
-    <input type="checkbox" id="menu-toggle">
+<body class="show-nav">
+    <input type="checkbox" id="menu-toggle" style="display: none;">
     <header>
-        <img src="../images/logo.png" alt="Fietsbook logo">
+        <img src="./images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <div class="language-toggle">
+            <div class="dropdown">
+                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
+                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="language-btn">Language</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setLanguage('en')">English</a>
+                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
+                </div>
+            </div>
+        </div>
         <nav>
-            <a href="../">Home</a>
-			<a href="../products/">Products</a>
-            <a href="../tools/">Tools</a>
-            <a href="../hotspots/">Hotspots</a>
-            <a href="../about/">About</a>
-            <a href="./">Activity</a>
-            <a href="../contact/">Contact Us</a>
+                <a href="./">Home</a>
+                <a href="./tools/">Tools</a>
+                <a href="./hotspots/">Hotspots</a>
+                <a href="./about/">About</a>
+                <a href="./activity/">Activity</a>
+                <a href="./contact/">Contact Us</a>
+  
         </nav>
     </header>
 
