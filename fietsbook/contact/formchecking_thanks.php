@@ -61,8 +61,39 @@
         </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
-    <script src="../js/lang_color.js"></script> 
-    <script src="../js/lang_color.js"></script>  
+<script src="../js/lang_color.js"></script>
+<script>
+    function setColorScheme(scheme) {
+        document.body.classList.remove('dark-mode', 'light-mode');
+
+        if (scheme === 'default') {
+            document.body.classList.add('light-mode');
+        } else if (scheme === 'alternate') {
+            document.body.classList.add('dark-mode');
+        }
+
+        applyDarkModeToElements(scheme);
+
+        localStorage.setItem('colorScheme', scheme);
+    }
+
+    function applyDarkModeToElements(scheme) {
+        const elementsToStyle = ['.funwelcome', '.product-title'];
+        elementsToStyle.forEach((selector) => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach((element) => {
+                element.classList.toggle('dark-mode', scheme === 'alternate');
+            });
+        });
+    }
+
+    function loadColorScheme() {
+        const savedScheme = localStorage.getItem('colorScheme');
+        setColorScheme(savedScheme || 'default');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadColorScheme);
+</script>
 </body>
 
 </html>
