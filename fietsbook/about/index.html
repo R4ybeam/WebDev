@@ -14,56 +14,85 @@
         <img src="../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <div class="language-toggle">
+            <div class="dropdown">
+                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
+                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="language-btn">Language</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setLanguage('en')">English</a>
+                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
+                </div>
+            </div>
+        </div>
         <nav>
-            <a href="../">Home</a>
-			<a href="../products/">Products</a>
-            <a href="../tools/">Tools</a>
-            <a href="../hotspots/">Hotspots</a>
-            <a href="./">About</a>
-            <a href="../activity/">Activity</a>
-            <a href="../contact/">Contact Us</a>
+                <a href="../">Home</a>
+                <a href="../tools/">Tools</a>
+                <a href="../hotspots/">Hotspots</a>
+                <a href="#">About</a>
+                <a href="../activity/">Activity</a>
+                <a href="../contact/">Contact Us</a>  
         </nav>
     </header>
 
-    <main id="MAIN">
+    
     <main>
-        <h2>Welkom bij fietsbook</h2>
-        <p>Bij FietsBook geloven we in de kracht van de fiets als een duurzaam, gezond en plezierig vervoermiddel.
+        <h2>Welkom bij Fietsbook</h2>
+        <p>Bij Fietsbook geloven we in de kracht van de fiets als een duurzaam, gezond en plezierig vervoermiddel.
             Ons platform is niet zomaar een plek waar je fietsen kunt kopen, maar een community die fietsliefhebbers 
             samenbrengt om voordelige deals te vinden en tweedehands fietsen een nieuw leven te geven.</p>
         <h2>Onze Missie: Fietsen Toegankelijk Maken voor Iedereen</h2>
-        <p>Bij FietsBook streven we ernaar om fietsen toegankelijk te maken voor iedereen, ongeacht hun budget. 
+        <p>Bij Fietsbook streven we ernaar om fietsen toegankelijk te maken voor iedereen, ongeacht hun budget. 
             We begrijpen dat een goede fiets een investering is, en daarom hebben we FietsBook opgericht - jouw one-stop-bestemming
              voor betaalbare fietsen en geweldige koopjes.</p>
-        <h2>Wat maakt ons uniek</h2>
-        <ol>
-            <li>Gemeenschap van fietsliefhebbers <p>FietsBook is meer dan een marktplaats. Het is een gemeenschap van gelijkgestemde fietsliefhebbers die hun passie voor fietsen delen. Leer van anderen, 
-            deel jouw ervaringen en ontmoet mede-fietsers.</p></li>
-            <li>Groot aanbod <p>Of je nu op zoek bent naar een gloednieuwe fiets of een betrouwbare tweedehands optie, FietsBook heeft het allemaal. Blader door ons diverse aanbod en
-            vind de perfecte fiets die bij jouw behoeften en stijl past.</p></li>
-            <li>Betrouwbaarheid en kwaliteit <p>Bij FietsBook waarderen we kwaliteit en betrouwbaarheid. Onze verkopers worden zorgvuldig geselecteerd, 
-            en we streven ernaar om transparantie te bieden over de staat van de aangeboden fietsen.
-            Jouw tevredenheid staat voorop.</p></li>
-        </ol>
-        <h2>Hoe werkt fietsbook</h2>
-        <ol>
-        <li>Blader en ontdek <p>Bekijk ons uitgebreide assortiment fietsen. Van stadsfietsen tot mountainbikes, we hebben voor elk wat wils.</p></li>
-        <li>Plaats zoeken <p>Vind eenvoudig de beste plekken om betaalbare fietsen te kopen in jouw omgeving of ontdek geweldige tweedehands deals.</p></li>
-        <li>Verbind met verkopers <p>Neem rechtstreeks contact op met verkopers, stel vragen en maak veilige afspraken om jouw droomfiets te bemachtigen.</p></li>
-        </ol>
-        <p>Bij FietsBook geloven we dat elke fiets een verhaal heeft, en we willen jou helpen het jouwe te ontdekken. Sluit je aan bij onze gemeenschap en ontdek de eindeloze mogelijkheden van FietsBook!</p>
+        <h2>Wat maakt ons uniek?</h2>
+        <ul>
+            <li>
+                <h3>Gemeenschap van fietsliefhebbers</h3> 
+                <p>Fietsbook is meer dan een marktplaats. Het is een gemeenschap van gelijkgestemde fietsliefhebbers die hun passie voor fietsen delen. Leer van anderen, deel jouw ervaringen en ontmoet mede-fietsers.</p>
+            </li>
+            <li>
+                <h3>Groot aanbod</h3> 
+                <p>Of je nu op zoek bent naar een gloednieuwe fiets of een betrouwbare tweedehands optie, FietsBook heeft het allemaal. Blader door ons diverse aanbod envind de perfecte fiets die bij jouw behoeften en stijl past.</p>
+
+            </li>
+            <li>
+                <h3>Betrouwbaarheid en kwaliteit</h3>
+                <p>Bij Fietsbook waarderen we kwaliteit en betrouwbaarheid. Onze verkopers worden zorgvuldig geselecteerd, en we streven ernaar om transparantie te bieden over de staat van de aangeboden fietsen.Jouw tevredenheid staat voorop.</p>
+
+        </li>
+        </ul>
+        <h2>Hoe werkt Fietsbook?</h2>
+        <ul>
+            <li>
+                <h3>Blader en ontdek</h3>
+                <p>Bekijk ons uitgebreide assortiment fietsen. Van stadsfietsen tot mountainbikes, we hebben voor elk wat wils.</p>
+            </li>
+            <li>
+                <h3>Plaats zoeken</h3>
+                <p>Vind eenvoudig de beste plekken om betaalbare fietsen te kopen in jouw omgeving of ontdek geweldige tweedehands deals.</p>
+            </li>
+            <li>
+                <h3>Verbind met verkopers</h3>
+                <p>Neem rechtstreeks contact op met verkopers, stel vragen en maak veilige afspraken om jouw droomfiets te bemachtigen.</p>
+            </li>
+        </ul>
+        <div id="slot">
+            <p >Bij Fietsbook geloven we dat elke fiets een verhaal heeft, en we willen jou helpen het jouwe te ontdekken.</p>
+            <p>Sluit je aan bij onze gemeenschap en ontdek de eindeloze mogelijkheden van Fietsbook!</p>
+        </div>
     </main>
     <footer>
         <section>
             <div class="bottom-nav">
                 <ul>
-                    <li><a href="../voorwaarden/index.html">Privacy Policy</a></li>
-                    <li><a href="../about/index.html">About</a></li>
-                    <li><a href="../contact/index.php">Contact</a></li>
-                    <li><a href="../links/index.html">Useful links</a></li>
-                    <li><a href="../service/index.html">Terms of Service</a></li>
                     <li><a href="../voorwaarden/">Privacy Policy</a></li>
-                    <li><a href="../about/">About</a></li>
+                    <li><a href="#">About</a></li>
                     <li><a href="../contact/">Contact</a></li>
                     <li><a href="../links/">Useful links</a></li>
                     <li><a href="../service/">Terms of Service</a></li>

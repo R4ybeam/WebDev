@@ -210,38 +210,14 @@ footer {
 
 .bottom-nav li {
     margin: 2rem 10px;
+    inline-size: 119.141px;
 }
 
 .bottom-nav a {
     text-decoration: none;
     color: #f4f4f4;
     transition: 0.3s ease;
-}
-
-.bottom-nav a:hover {
-    color: rgba(255, 255, 255, 0.524);
-}
-
-.bottom-nav {
-    margin-bottom: 2rem;
-}
-
-.bottom-nav ul {
-    display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.bottom-nav li {
-    margin: 2rem 10px;
-}
-
-.bottom-nav a {
-    text-decoration: none;
-    color: #f4f4f4;
-    transition: ease 0.3s;
+    inline-size: 119.141px;    
 }
 
 .bottom-nav a:hover {
