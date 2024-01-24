@@ -77,7 +77,7 @@ $result = $conn->query($query);
                 echo "<p><strong>{$authorUsername}</strong> posted on {$createdAt}:<br>{$content}</p>";
             }
             ?>
-    </section>
+        </section>
     </main>
 
     <footer>

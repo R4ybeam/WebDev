@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="../../css/activity.css">
 </head>
 <body>
-<input type="checkbox" id="menu-toggle">
+    <input type="checkbox" id="menu-toggle">
     <header>
         <img src="../../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
@@ -77,24 +77,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="../../contact/">Contact Us</a>
         </nav>
     </header>
+    <main>
+        <section class="container">
+            <h2>Login</h2>
 
-    <h2>Login</h2>
+                <?php if (isset($error)): ?>
+                    <p style="color: red;"><?php echo $error; ?></p>
+                <?php endif; ?>
 
-    <?php if (isset($error)): ?>
-        <p style="color: red;"><?php echo $error; ?></p>
-    <?php endif; ?>
+                <form action="./" method="post">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" required>
 
-    <form action="./" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" required>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
+                    <button type="submit">Login</button>
+                </form>
 
-        <button type="submit">Login</button>
-    </form>
-
-    <p>Don't have an account? <a href="../register/">Register here</a></p>
+                <p>Don't have an account? <a href="../register/">Register here</a></p>
+        </section>
+    </main>
     <footer>
         <section>
             <div class="bottom-nav">
