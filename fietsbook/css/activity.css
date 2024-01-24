@@ -17,6 +17,7 @@ form {
     align-items: center;
     justify-content: center;
     margin-bottom: 20px;
+    width: 50%;
 }
 
 input[type="text"],
