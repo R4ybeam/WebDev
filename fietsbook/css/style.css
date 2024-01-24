@@ -8,6 +8,9 @@ body {
     margin: 0;
     padding: 0 0 10px 0;
     background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Header Styles */
@@ -125,6 +128,9 @@ nav a:hover {
     background-color: #63b0a8; /* Lighter shade than the background color */
     color: rgba(255, 255, 255, 0.524);
 }
+main {
+    flex-grow: ;
+}
 
 .temp-nav {
     display: flex;
@@ -195,6 +201,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px;
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
 .bottom-nav ul {
@@ -246,7 +253,6 @@ footer {
 }
 
 .bottom-nav {
-    margin-bottom: 2rem;
     width: 100%;
 }
 
@@ -257,4 +263,10 @@ body.show-nav .temp-nav {
 
 body.show-nav main {
     margin-bottom: 150px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
