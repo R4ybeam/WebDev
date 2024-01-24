@@ -33,7 +33,7 @@ $result = $conn->query($query);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>activity</title>
-    <link rel="stylesheet" href="https://unkpg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/activity.css">
 </head>
@@ -56,26 +56,26 @@ $result = $conn->query($query);
     </header>
 
     <main>
-        
-    <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
+        <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+        <button><a href="logout.php">Logout</a></button>
 
-    <form action="post.php" method="post">
-        <textarea name="content" placeholder="What's on your mind?"></textarea>
-        <button type="submit">Post</button>
-    </form>
+        <form action="post.php" method="post">
+            <textarea name="content" placeholder="What's on your mind?"></textarea>
+            <button type="submit">Post</button>
+        </form>
 
-    <h2>Recent Posts</h2>
+        <h2>Recent Posts</h2>
 
-    <?php
-    while ($row = $result->fetch_assoc()) {
-        $postId = $row['id'];
-        $authorUsername = $row['author_username'];
-        $content = $row['content'];
-        $createdAt = $row['created_at'];
+        <?php
+        while ($row = $result->fetch_assoc()) {
+            $postId = $row['id'];
+            $authorUsername = htmlspecialchars($row['author_username']);
+            $content = htmlspecialchars($row['content']);
+            $createdAt = htmlspecialchars($row['created_at']);
 
-        echo "<p><strong>{$authorUsername}</strong> posted on {$createdAt}:<br>{$content}</p>";
-    }
-    ?>
+            echo "<p><strong>{$authorUsername}</strong> posted on {$createdAt}:<br>{$content}</p>";
+        }
+        ?>
 
     </main>
 

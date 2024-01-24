@@ -16,16 +16,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Check if the username is already taken
-    $checkQuery = "SELECT * FROM users WHERE username = '$username'";
-    $checkResult = $conn->query($checkQuery);
+    $checkQuery = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $checkQuery->bind_param("s", $username);
+    $checkQuery->execute();
+    $checkResult = $checkQuery->get_result();
 
     if ($checkResult->num_rows > 0) {
-        $error = "Username already taken. Please choose another.";
+        $error = "Sorry, this username is already in use. Please choose another.";
     } else {
-        // Insert new user into the database
-        $insertQuery = "INSERT INTO users (username, password) VALUES ('$username', '$password')";
-        $conn->query($insertQuery);
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+        $insertQuery = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
+        $insertQuery->bind_param("ss", $username, $hashedPassword);
+        $insertQuery->execute();
 
         $_SESSION['user_id'] = $conn->insert_id;
         $_SESSION['username'] = $username;
@@ -35,13 +38,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="https://unkpg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/activity.css">
 </head>
