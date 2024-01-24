@@ -14,7 +14,7 @@ let lastScrollTop = 0;
             let buttons = document.querySelectorAll('.dropbtn');
             buttons.forEach(button => {
                 let buttonOpacity = Math.min(1, 1 - scrollTop / 200);
-                button.style.backgroundColor = `rgba(111, 34, 50, ${buttonOpacity})`;
+                button.style.backgroundColor = `rgba(255, 255, 255, ${buttonOpacity})`;
             });
 
             lastScrollTop = scrollTop;
