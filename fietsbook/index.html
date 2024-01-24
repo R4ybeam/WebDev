@@ -20,8 +20,8 @@
             <div class="dropdown">
                 <button class="dropbtn" id="color-scheme-btn">Scheme</button>
                 <div class="dropdown-content">
-                    <a href="#" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
-                    <a href="#" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
+                    <a href="" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
+                    <a href="" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
                 </div>
             </div>  
         </div>
@@ -32,27 +32,26 @@
             <a href="./about/">About</a>
             <a href="./activity/">Activity</a>
             <a href="./contact/">Contact Us</a>
-
         </nav>
     </header>
 
     <main>
         <div class="funwelcome">
             <h2>Welcome!</h2>
-            <p>Fietsbook is the most advanced online platform when it comes to acquiring bicycles. We not only share tips on how to get your bikes, but we also provide you with the necessary materials and show you the optimal locations to pick up your bikes!</p>
+            <p>Fietsbook is the most advanced website online when it comes to purchasing bicycles. We not only share tips on how to get your bikes, but we also sell you the necessary materials and show you the optimal locations to pick up your bikes!</p>
             <p>...</p>
-            <p>On our website, you will find many useful items to help you with your important job and stay away from the police.</p>
+            <p>In our website, you will find many handy items to help you with your important job and stay away from the police.</p>
             <p>...</p>
-            <p>Our website uses the mystical 7-factor security and is police-proof; browse our site without worries and have fun.</p>
+            <p>Our website uses the mystical 7-factor security and is police-proof, surf our website without worries and have a lot of fun.</p>
         </div>
-        
+
         <div class="product-title">
             <h2>Featured Bicycles</h2>
-            <p>Once you have a bike in your inventory, you can reach us through our contact page to sell that bike quickly and easily.</p>
+            <p>After you have a bike in your inventory, you can reach us via our contact page to sell that bike quickly and easily.</p>
             <p>...</p>
             <p>Just write your website username, name, email, and message, and we will contact you for further details.</p>
         </div>
-        
+
         <section class="product-listing">
             <div class="product">
                 <img src="./images/elektrische_fiets.jpg" alt="Electric Bike">
@@ -61,7 +60,7 @@
                 <p class="price">$200</p>
                 <button>Buy now</button>
             </div>
-    
+
             <div class="product">
                 <img src="./images/stadsfiets1.jpg" alt="City Bike">
                 <h3>City Bike</h3>
@@ -69,7 +68,7 @@
                 <p class="price">$50</p>
                 <button>Buy now</button>
             </div>
-    
+
             <div class="product">
                 <img src="./images/roadbike1.jpg" alt="Road Bike">
                 <h3>Road Bike</h3>
@@ -84,7 +83,7 @@
                 <p class="price">$75</p>
                 <button>Buy now</button>
             </div>
-    
+
             <div class="product">
                 <p>Contact us to list your bike here</p>
             </div>
@@ -98,10 +97,10 @@
                 <p>Contact us to list your bike here</p>
             </div>
         </section>
-    
-        <a href="./contact/">Contact us!</a>
+
+        <a>Contact us!</a>
+
     </main>
-    
 
     <footer>
         <section>
@@ -118,7 +117,39 @@
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
 
-    <script src="../js/lang_color.js"></script>  
+<script src="../js/lang_color.js"></script>
+<script>
+    function setColorScheme(scheme) {
+        document.body.classList.remove('dark-mode', 'light-mode');
+
+        if (scheme === 'default') {
+            document.body.classList.add('light-mode');
+        } else if (scheme === 'alternate') {
+            document.body.classList.add('dark-mode');
+        }
+
+        applyDarkModeToElements(scheme);
+
+        localStorage.setItem('colorScheme', scheme);
+    }
+
+    function applyDarkModeToElements(scheme) {
+        const elementsToStyle = ['.funwelcome', '.product-title'];
+        elementsToStyle.forEach((selector) => {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach((element) => {
+                element.classList.toggle('dark-mode', scheme === 'alternate');
+            });
+        });
+    }
+
+    function loadColorScheme() {
+        const savedScheme = localStorage.getItem('colorScheme');
+        setColorScheme(savedScheme || 'default');
+    }
+
+    document.addEventListener('DOMContentLoaded', loadColorScheme);
+</script>
 </body>
 
 </html>
