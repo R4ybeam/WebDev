@@ -84,11 +84,11 @@ $result = $conn->query($query);
         <section>
             <div class="bottom-nav">
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="../voorwaarden/index.html">Privacy Policy</a></li>
+                    <li><a href="../about/index.html">About</a></li>
                     <li><a href="#">Contact</a></li>
-                    <li><a href="#">Useful links</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="../links/index.html">Useful links</a></li>
+                    <li><a href="../service/index.html">Terms of Service</a></li>
                 </ul>
             </div>
         </section>
