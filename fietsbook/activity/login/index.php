@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p style="color: red;"><?php echo $error; ?></p>
     <?php endif; ?>
 
-    <form action="login.php" method="post">
+    <form action="./" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" required>
 
