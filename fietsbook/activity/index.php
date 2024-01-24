@@ -48,8 +48,8 @@ $result = $conn->query($query);
             <div class="dropdown">
                 <button class="dropbtn" id="color-scheme-btn">Scheme</button>
                 <div class="dropdown-content">
-                    <a href="#" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
-                    <a href="#" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
+                    <a href="" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
+                    <a href="" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
                 </div>
             </div>  
         </div>
