@@ -1,28 +1,35 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+h1, h2, h3 {
+    margin: 1.5rem 7rem 1.5rem 2rem;
 }
 
-h3, h2 {
-    color: #4a6e7a;
+p{
+    margin: 1rem 7rem 0.6rem 2rem;
 }
 
-h2 {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 10px;
-    margin-top: 20px;
+.bruh li {
+    list-style: none;
+    margin: 2rem 2rem 2rem 0;
 }
 
-p {
-    margin-bottom: 15px;
+.bruh a {
+    text-decoration: none;
+    padding: 1rem;
+    background-color: #4a6e7a;
+    border-radius: 8px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    position: relative;
+    transition: 0.3s ease-in-out;
+    margin-left: 0;
+    color: black;
+    font-weight: 600;
 }
 
-.bruh {
-    height:  100%;
-    
+.bruh a:hover {
+    margin-left: 1rem;
+    background-color: #738991; 
+    color: white;
+    font-weight: 700;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.5); /* Box shadow on hover */
 }
-
-.marge {
-    margin-bottom: 10rem;
-}
-
