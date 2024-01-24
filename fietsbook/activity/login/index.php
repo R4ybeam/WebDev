@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
 <input type="checkbox" id="menu-toggle">
     <header>
-        <img src="../images/logo.png" alt="Fietsbook logo">
+        <img src="../../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
