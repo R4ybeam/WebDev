@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(['secure' => true, 'httponly' => true]);
 session_start();
 
 $servername = "localhost";
@@ -12,11 +13,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if (isset($_SESSION['logout_message'])) {
+    echo '<p class="logout-message">' . htmlspecialchars($_SESSION['logout_message']) . '</p>';
+    unset($_SESSION['logout_message']); // Clear the message
+}
 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+$error = '';
+
+if (isset($_SESSION['user_id'])) {
+    header("Location: ../");
+    exit();
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $conn->real_escape_string($_POST['username']);
+    $password = $conn->real_escape_string($_POST['password']);
+
+    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();

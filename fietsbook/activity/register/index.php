@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(['secure' => true, 'httponly' => true]);
 session_start();
 
 $servername = "localhost";
@@ -13,10 +14,10 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $conn->real_escape_string($_POST['username']);
+    $password = $conn->real_escape_string($_POST['password']);
 
-    $checkQuery = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $checkQuery = $conn->prepare("SELECT id FROM users WHERE username = ?");
     $checkQuery->bind_param("s", $username);
     $checkQuery->execute();
     $checkResult = $checkQuery->get_result();
@@ -32,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['user_id'] = $conn->insert_id;
         $_SESSION['username'] = $username;
-        header("Location: ../");
+        $_SESSION['success_message'] = "Registration successful! You can now log in.";
+        header("Location: ../login/");
         exit();
     }
 }
