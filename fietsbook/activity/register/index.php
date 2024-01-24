@@ -67,24 +67,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="../../contact/">Contact Us</a>
         </nav>
     </header>
+    <main>
+        <section class="container">
+            <h2>Register</h2>
 
-    <h2>Register</h2>
+            <?php if (isset($error)): ?>
+                <p style="color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
 
-    <?php if (isset($error)): ?>
-        <p style="color: red;"><?php echo $error; ?></p>
-    <?php endif; ?>
+            <form action="./" method="post">
+                <label for="username">Username:</label>
+                <input type="text" name="username" required>
 
-    <form action="./" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
 
-        <button type="submit">Register</button>
-    </form>
-
-    <p>Already have an account? <a href="../login/">Login here</a></p>
+            <p>Already have an account? <a href="../login/">Login here</a></p>
+        </section>
+    </main>
     <footer>
         <section>
             <div class="bottom-nav">
