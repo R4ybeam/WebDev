@@ -1,10 +1,27 @@
-
-
-h1 {
-    color: #4a6e7a;
+h1, h2, h3 {
+    margin: 1.5rem 6rem 1.5rem 2rem;
 }
 
+p{
+    margin: 1rem 6rem 1.5rem 2rem;
+}
 
-.gebruikt li{
+.bruh ul {
+    margin: 2rem 2rem 2rem 0;
+}
+
+ ul:last-child {
+    list-style: none;
+}
+
+.bruh li {
+    margin: 0.5rem 6rem 0.5rem 1rem;
+}
+
+.bruh a {
     text-decoration: none;
+}
+
+.bruh a:hover {
+    color: black;
 }
