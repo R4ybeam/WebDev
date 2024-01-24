@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="https://unkpg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body class="show-nav">
-    <input type="checkbox" id="menu-toggle">
+    <input type="checkbox" id="menu-toggle" style="display: none;">
     <header>
+        <img src="./images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <div class="language-toggle">
             <div class="dropdown">
                 <button class="dropbtn" id="color-scheme-btn">Scheme</button>
@@ -29,18 +32,13 @@
                 </div>
             </div>
         </div>
-        <img src="./images/logo.png" alt="Fietsbook logo">
-        <h1>Fietsbook</h1>
-        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-            
                 <a href="./">Home</a>
                 <a href="./tools/">Tools</a>
                 <a href="./hotspots/">Hotspots</a>
                 <a href="./about/">About</a>
                 <a href="./activity/">Activity</a>
-                <a href="./contact/">Contact Us</a>
-           
+                <a href="./contact/">Contact Us</a>  
         </nav>
     </header>
 
@@ -81,6 +79,7 @@
                 <button>Buy now</button>
             </div>
         </section>
+        
     </main>
 
     <footer>
