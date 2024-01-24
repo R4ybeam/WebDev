@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,40 +8,24 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/about.css">
 </head>
-
-<body class="show-nav">
+<body>
     <input type="checkbox" id="menu-toggle" style="display: none;">
     <header>
-        <img src="./images/logo.png" alt="Fietsbook logo">
+        <img src="../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
-        <div class="language-toggle">
-            <div class="dropdown">
-                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
-                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" id="language-btn">Language</button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="setLanguage('en')">English</a>
-                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
-                </div>
-            </div>
-        </div>
         <nav>
-                <a href="./">Home</a>
-                <a href="./tools/">Tools</a>
-                <a href="./hotspots/">Hotspots</a>
-                <a href="./about/">About</a>
-                <a href="./activity/">Activity</a>
-                <a href="./contact/">Contact Us</a>
-  
+            <a href="../">Home</a>
+			<a href="../products/">Products</a>
+            <a href="../tools/">Tools</a>
+            <a href="../hotspots/">Hotspots</a>
+            <a href="./">About</a>
+            <a href="../activity/">Activity</a>
+            <a href="../contact/">Contact Us</a>
         </nav>
     </header>
 
+    <main id="MAIN">
     <main>
         <h2>Welkom bij fietsbook</h2>
         <p>Bij FietsBook geloven we in de kracht van de fiets als een duurzaam, gezond en plezierig vervoermiddel.
@@ -70,11 +53,15 @@
         </ol>
         <p>Bij FietsBook geloven we dat elke fiets een verhaal heeft, en we willen jou helpen het jouwe te ontdekken. Sluit je aan bij onze gemeenschap en ontdek de eindeloze mogelijkheden van FietsBook!</p>
     </main>
-
     <footer>
         <section>
             <div class="bottom-nav">
                 <ul>
+                    <li><a href="../voorwaarden/index.html">Privacy Policy</a></li>
+                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../contact/index.php">Contact</a></li>
+                    <li><a href="../links/index.html">Useful links</a></li>
+                    <li><a href="../service/index.html">Terms of Service</a></li>
                     <li><a href="../voorwaarden/">Privacy Policy</a></li>
                     <li><a href="../about/">About</a></li>
                     <li><a href="../contact/">Contact</a></li>
@@ -87,5 +74,4 @@
     </footer>
     <script src="../js/lang_color.js"></script> 
 </body>
-
 </html>
