@@ -99,7 +99,6 @@ header img {
     position: absolute;
     top: 5%;
     left: 10px;
-    z-index: 1100; /*wrm/wa doe da..?*/
 }
 
 nav {
