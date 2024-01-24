@@ -4,39 +4,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Algemene Gebruiksvoorwaarden Fietsbook</title>
+    <title>Terms of Service Fietsbook</title>
     <link rel="stylesheet" href="../css/service.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
+    <input type="checkbox" id="menu-toggle" style="display: none;">
+    <header>
+        <img src="../images/logo.png" alt="Fietsbook logo">
+        <h1 >fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <div class="language-toggle">
+            <div class="dropdown">
+                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
+                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn" id="language-btn">Language</button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="setLanguage('en')">English</a>
+                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
+                </div>
+            </div>
+        </div>
+        <nav>
+                <a href="./">Home</a>
+                <a href="./tools/">Tools</a>
+                <a href="./hotspots/">Hotspots</a>
+                <a href="./about/">About</a>
+                <a href="./activity/">Activity</a>
+                <a href="./contact/">Contact Us</a>
+  
+        </nav>
+    </header>
+    <main class="bruh">
+        <h1>Terms of Service Fietsbook</h1>
 
-    <h1>Algemene Gebruiksvoorwaarden Fietsbook</h1>
+        <h2>1. Account Registration</h2>
 
-    <h2>1. Accountregistratie</h2>
+        <p>1.1. To access certain features of Fietsbook, you must create an account. You are responsible for providing accurate and up-to-date information during the registration process.</p>
 
-    <p>1.1. Om toegang te krijgen tot bepaalde functies van Fietsbook, moet je een account aanmaken. Je bent verantwoordelijk voor het verstrekken van accurate en actuele informatie tijdens het registratieproces.</p>
+        <p>1.2. You may not create an account for anyone other than yourself without permission, or create an account in an automated manner.</p>
 
-    <p>1.2. Je mag geen account aanmaken voor iemand anders dan jezelf zonder toestemming, of een account aanmaken op een geautomatiseerde manier.</p>
+        <h2>2. Usage Rights</h2>
 
-    <h2>2. Gebruiksrechten</h2>
+        <p>2.1. You agree to use Fietsbook only for lawful purposes and in a manner that does not infringe on the rights of others.</p>
 
-    <p>2.1. Je stemt ermee in Fietsbook alleen te gebruiken voor wettige doeleinden en op een manier die geen inbreuk maakt op de rechten van anderen.</p>
+        <p>2.2. You may not upload harmful code, viruses, or other damaging components to Fietsbook.</p>
 
-    <p>2.2. Je mag geen schadelijke code, virussen of andere schadelijke componenten uploaden naar Fietsbook.</p>
+        <h2>3. Liability</h2>
 
-    <h2>3. Aansprakelijkheid</h2>
+        <p>3.1. Fietsbook is not liable for any loss or damage arising from your use of the services.</p>
 
-    <p>3.1. Fietsbook is niet aansprakelijk voor verlies of schade die voortvloeit uit jouw gebruik van de diensten.</p>
+        <h2>4. Changes to the Terms</h2>
 
-    <h2>4. Wijzigingen in de Voorwaarden</h2>
+        <p>4.1. Fietsbook reserves the right to change these Terms at any time. It is your responsibility to stay informed of any changes.</p>
 
-    <p>4.1. Fietsbook behoudt zich het recht voor om deze Voorwaarden op elk moment te wijzigen. Het is jouw verantwoordelijkheid om op de hoogte te blijven van eventuele wijzigingen.</p>
+        <h2>5. Contact</h2>
 
-    <h2>5. Contact</h2>
-
-    <p>5.1. Als je vragen hebt over deze Voorwaarden, neem dan contact met ons op via <a href="mailto:contact@fietsbook.com">contact@fietsbook.com</a>.</p>
-
-
+        <p>5.1. If you have questions about these Terms, please contact us.</p>
+        <ul>
+            <li><a href="../contact/index.php">Contact us</a></li>
+        </ul>
+    </main>
+    <footer>
+        <div class="bottom-nav">
+            <ul>
+                <li><a href="./voorwaarden/">Privacy Policy</a></li>
+                <li><a href="./about/">About</a></li>
+                <li><a href="./contact/">Contact</a></li>
+                <li><a href="./links/">Useful links</a></li>
+                <li><a href="./service/">Terms of Service</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2023 Fietsbook. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

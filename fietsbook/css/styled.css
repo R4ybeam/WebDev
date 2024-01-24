@@ -1,0 +1,272 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 0 10px 0;
+    background-color: #333; /* Dark background color */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #ddd; /* Light text color */
+}
+
+/* Header Styles */
+#menu-toggle {
+    display: none;
+}
+
+header {
+    background-color: #4a6e7a;
+    color: #fff;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+header img {
+    max-width: 4rem;
+}
+
+.language-toggle {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    margin: 0 10px;
+    position: relative;
+}
+
+.dropbtn {
+    width: 6rem;
+    border-radius: 3px;
+    box-shadow: none;
+    border: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #405f69;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: max-content;
+    padding: 0;
+    border-radius: 3px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 6px 0;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    width: 6rem;
+    border-radius: 3px;
+}
+
+.dropdown-content a:not(:last-child) {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #63b0a8;
+}
+
+#menu-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 10px;
+}
+
+nav {
+    background-color: #4a6e7a;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem;
+}
+
+nav a:hover {
+    background-color: #63b0a8;
+    color: rgba(255, 255, 255, 0.524);
+}
+
+.temp-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #444;
+    color: #fff;
+    padding: 5px;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s;
+}
+
+.temp-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem;
+}
+
+.temp-nav a:hover {
+    background-color: #555;
+}
+
+#menu-toggle:not(:checked) + header #menu-icon {
+    display: block;
+}
+
+#menu-toggle:checked + header nav {
+    display: flex;
+}
+
+#menu-toggle:checked + header {
+    background-color: #4a6e7a;
+}
+
+#menu-toggle:checked + header #menu-icon {
+    display: block;
+}
+
+body:not(.show-nav) header {
+    width: 100%;
+    background-color: #4a6e7a;
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+    top: 0;
+}
+
+body:not(.show-nav) #menu-icon {
+    display: block;
+}
+
+#menu-toggle:not(:checked) + header nav {
+    display: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4a6e7a;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    margin: 2rem 10px;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: 0.3s ease;
+}
+
+.bottom-nav a:hover {
+    color: rgba(255, 255, 255, 0.524);
+}
+
+.bottom-nav {
+    margin-bottom: 2rem;
+}
+
+.bottom-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bottom-nav li {
+    margin: 2rem 10px;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: ease 0.3s;
+}
+
+.bottom-nav a:hover {
+    color: rgba(255, 255, 255, 0.524);
+}
+
+.bottom-nav {
+    width: 100%;
+}
+
+body.show-nav .temp-nav {
+    opacity: 1;
+    visibility: visible;
+}
+
+body.show-nav main {
+    margin-bottom: 150px;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+

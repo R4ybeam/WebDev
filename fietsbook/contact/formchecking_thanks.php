@@ -11,32 +11,22 @@
     <title>Bedankt</title>
 	<link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://unpkg.com/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<input type="checkbox" id="menu-toggle" style="display: none;">
     <header>
+        <img src="../images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-            <h1>Miguel Ringoot</h1>
-            <ul>
-                <li>
-                    <a href="../">Home</a>
-                </li>
-                <li>
-                    <a href="../projecten/">Projecten</a>
-                </li>
-                <li>
-                    <a href="../cv/">CV</a>
-                </li>
-                <li>
-                    <a href="../blog/">Blog</a>
-                </li>
-                <li>
-                    <a href="../contact/">Contact</a>
-                </li>
-            </ul>
+            <a href="../">Home</a>
+			<a href="../products/">Products</a>
+            <a href="../tools/">Tools</a>
+            <a href="../hotspots/">Hotspots</a>
+            <a href="../about/">About</a>
+            <a href="../activity/">Activity</a>
+            <a href="./">Contact Us</a>
         </nav>
     </header>
     <main>
@@ -58,8 +48,20 @@
 		</section>
     </main>
     <footer>
-        <p>Copyright &copy; 2023 Miguel Ringoot</p>
+        <section>
+            <div class="bottom-nav">
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Useful links</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </section>
+        <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
+    <script src="../js/lang_color.js"></script> 
     <script src="../js/lang_color.js"></script>  
 </body>
 

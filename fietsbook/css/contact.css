@@ -58,11 +58,11 @@ input[type="submit"] {
     margin-top: 5px;
     margin-bottom: 15px;
     box-sizing: border-box;
-    border: none;
     font-weight: bold;
     color: #555;
     cursor: pointer;
     border-radius: 50px;
+    border: 1px solid #555;
     transition: background-color 0.3s ease;
 }
 
@@ -71,7 +71,7 @@ button {
     height: 3rem;
     color: #555;
     border-radius: 50px;
-    border: none;
+    border: 1px solid #555;
     font-weight: bold;
     font-size: 1rem;
 }

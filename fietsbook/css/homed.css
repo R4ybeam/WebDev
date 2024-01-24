@@ -1,45 +1,46 @@
-/* Welcome Section */
+/* Dark Mode Welcome Section */
 .funwelcome {
     padding: 2rem;
     margin: 2rem 10rem; /* 2rem top and bottom, 10rem left and right */
-    background-color: #fff;
+    background-color: #333; /* Dark background color */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Inverted box shadow */
     text-align: center;
 }
 
 .funwelcome h2 {
-    color: #333;
+    color: #ddd; /* Light text color */
     font-size: 1.5rem;
 }
 
 .funwelcome p {
-    color: #555;
+    color: #aaa; /* Slightly lighter text color */
     margin-bottom: 10px;
     font-size: 1rem;
 }
 
-/* Featured Bicycles Section */
+/* Dark Mode Featured Bicycles Section */
 .product-title {
     padding: 2rem;
     margin: 2rem 10rem; /* 2rem top and bottom, 10rem left and right */
-    background-color: #fff;
+    background-color: #333; /* Dark background color */
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Inverted box shadow */
     text-align: center;
 }
 
 .product-title h2 {
-    color: #333;
+    color: #ddd; /* Light text color */
     font-size: 1.5rem;
 }
 
 .product-title p {
-    color: #555;
+    color: #aaa; /* Slightly lighter text color */
     margin-bottom: 10px;
     font-size: 1rem;
 }
 
+/* Dark Mode Product Listing */
 .product-listing {
     display: flex;
     flex-wrap: wrap;
@@ -49,11 +50,11 @@
 
 .product {
     width: calc(25% - 2rem); /* Calculate width with margin adjustment */
-    background-color: #fff;
+    background-color: #333; /* Dark background color */
     padding: 15px;
     margin: 10px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Inverted box shadow */
     text-align: center;
     box-sizing: border-box; /* Include padding and border in the width */
 }
@@ -67,12 +68,12 @@
 }
 
 .product h3 {
-    color: #333;
+    color: #ddd; /* Light text color */
     font-size: 1rem;
 }
 
 .product p {
-    color: #555;
+    color: #aaa; /* Slightly lighter text color */
     margin-bottom: 10px;
     font-size: 0.8rem;
 }
@@ -95,19 +96,20 @@
 }
 
 .product button:hover {
-    background-color: #333;
+    background-color: #ddd; /* Lighter background color on hover */
 }
 
-/* "Contacteer ons" link */
+/* Dark Mode "Contacteer ons" link */
 main a {
     display: block;
     text-align: center;
     font-size: 1rem;
-    margin: 2rem 2rem -4rem 2rem; /* 2rem top and bottom, 10rem left and right */
+    margin: 2rem 2rem -4rem 2rem; /* 2rem top and bottom, 2rem left and right */
     color: #4a6e7a;
     text-decoration: underline;
 }
 
 main a:hover {
-    color: #333;
+    color: #ddd; /* Light text color on hover */
 }
+
