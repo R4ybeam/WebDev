@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(['secure' => true, 'httponly' => true]);
 session_start();
 
 $servername = "localhost";
@@ -12,11 +13,23 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if (isset($_SESSION['logout_message'])) {
+    echo '<p class="logout-message">' . htmlspecialchars($_SESSION['logout_message']) . '</p>';
+    unset($_SESSION['logout_message']); // Clear the message
+}
 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+$error = '';
+
+if (isset($_SESSION['user_id'])) {
+    header("Location: ../");
+    exit();
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $conn->real_escape_string($_POST['username']);
+    $password = $conn->real_escape_string($_POST['password']);
+
+    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -27,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
-            header("Location: index.php");
+            header("Location: ../");
             exit();
         } else {
             $error = "Invalid username or password";
@@ -45,8 +58,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/activity.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/activity.css">
 </head>
 <body>
 <input type="checkbox" id="menu-toggle">
@@ -55,13 +68,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-            <a href="../">Home</a>
-			<a href="../products/">Products</a>
-            <a href="../tools/">Tools</a>
-            <a href="../hotspots/">Hotspots</a>
-            <a href="../about/">About</a>
-            <a href="./">Activity</a>
-            <a href="../contact/">Contact Us</a>
+            <a href="../../">Home</a>
+			<a href="../../products/">Products</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../hotspots/">Hotspots</a>
+            <a href="../../about/">About</a>
+            <a href="../">Activity</a>
+            <a href="../../contact/">Contact Us</a>
         </nav>
     </header>
 
@@ -71,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p style="color: red;"><?php echo $error; ?></p>
     <?php endif; ?>
 
-    <form action="login.php" method="post">
+    <form action="./" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" required>
 
@@ -81,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Login</button>
     </form>
 
-    <p>Don't have an account? <a href="register.php">Register here</a></p>
+    <p>Don't have an account? <a href="../register/">Register here</a></p>
     <footer>
         <section>
             <div class="bottom-nav">
@@ -96,6 +109,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
-    <script src="../js/lang_color.js"></script> 
+    <script src="../../js/lang_color.js"></script> 
 </body>
 </html>

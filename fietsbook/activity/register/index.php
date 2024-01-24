@@ -1,4 +1,5 @@
 <?php
+session_set_cookie_params(['secure' => true, 'httponly' => true]);
 session_start();
 
 $servername = "localhost";
@@ -13,10 +14,10 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $conn->real_escape_string($_POST['username']);
+    $password = $conn->real_escape_string($_POST['password']);
 
-    $checkQuery = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $checkQuery = $conn->prepare("SELECT id FROM users WHERE username = ?");
     $checkQuery->bind_param("s", $username);
     $checkQuery->execute();
     $checkResult = $checkQuery->get_result();
@@ -32,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $_SESSION['user_id'] = $conn->insert_id;
         $_SESSION['username'] = $username;
-        header("Location: index.php");
+        $_SESSION['success_message'] = "Registration successful! You can now log in.";
+        header("Location: ../login/");
         exit();
     }
 }
@@ -46,8 +48,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/activity.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/activity.css">
 </head>
 <body>
 <input type="checkbox" id="menu-toggle">
@@ -56,13 +58,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-            <a href="../">Home</a>
-			<a href="../products/">Products</a>
-            <a href="../tools/">Tools</a>
-            <a href="../hotspots/">Hotspots</a>
-            <a href="../about/">About</a>
-            <a href="./">Activity</a>
-            <a href="../contact/">Contact Us</a>
+            <a href="../../">Home</a>
+			<a href="../../products/">Products</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../hotspots/">Hotspots</a>
+            <a href="../../about/">About</a>
+            <a href="../">Activity</a>
+            <a href="../../contact/">Contact Us</a>
         </nav>
     </header>
 
@@ -72,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p style="color: red;"><?php echo $error; ?></p>
     <?php endif; ?>
 
-    <form action="register.php" method="post">
+    <form action="./" method="post">
         <label for="username">Username:</label>
         <input type="text" name="username" required>
 
@@ -82,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Register</button>
     </form>
 
-    <p>Already have an account? <a href="login.php">Login here</a></p>
+    <p>Already have an account? <a href="../login/">Login here</a></p>
     <footer>
         <section>
             <div class="bottom-nav">
@@ -97,6 +99,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
-    <script src="../js/lang_color.js"></script> 
+    <script src="../../js/lang_color.js"></script> 
 </body>
 </html>
