@@ -28,3 +28,31 @@ p{
 .bruh a:hover {
     color: black;
 }
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+    color: #ddd;
+    margin: 1.5rem 6rem 1.5rem 2rem;
+}
+
+.dark-mode p {
+    color: #aaa;
+    margin: 1rem 6rem 1.5rem 2rem;
+}
+
+.dark-mode .bruh ul {
+    margin: 2rem 2rem 2rem 0;
+}
+
+.dark-mode .bruh li {
+    margin: 0.5rem 6rem 0.5rem 1rem;
+}
+
+.dark-mode .bruh a {
+    color: #4a6e7a;
+}
+
+.dark-mode .bruh a:hover {
+    color: black;
+}
