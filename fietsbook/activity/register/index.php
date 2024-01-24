@@ -53,10 +53,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
 <input type="checkbox" id="menu-toggle">
-    <header>
+<header>
         <img src="../../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <div class="language-toggle">
+            <div class="dropdown">
+                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
+                <div class="dropdown-content">
+                    <a href="#" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
+                    <a href="#" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
+                </div>
+            </div>  
+        </div>
         <nav>
             <a href="../../">Home</a>
 			<a href="../../products/">Products</a>
@@ -67,6 +76,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <a href="../../contact/">Contact Us</a>
         </nav>
     </header>
+
+    
     <main>
         <section class="container">
             <h2>Register</h2>
@@ -92,11 +103,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <section>
             <div class="bottom-nav">
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Useful links</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="../../privacy/">Privacy Policy</a></li>
+                    <li><a href="../../about/">About</a></li>
+                    <li><a href="../../contact/">Contact</a></li>
+                    <li><a href="../../links">Useful links</a></li>
+                    <li><a href="../../service/">Terms of Service</a></li>
                 </ul>
             </div>
         </section>

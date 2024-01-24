@@ -11,26 +11,19 @@
 </head>
 <body>
     <input type="checkbox" id="menu-toggle">
-    <header class="margin">
+    <header>
+        <img src="../images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <div class="language-toggle">
             <div class="dropdown">
                 <button class="dropbtn" id="color-scheme-btn">Scheme</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
-                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                    <a href="#" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
+                    <a href="#" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" id="language-btn">Language</button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="setLanguage('en')">English</a>
-                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
-                </div>
-            </div>
+            </div>  
         </div>
-        <img src="../images/logo.png" alt="Fietsbook logo">
-        <h1>Fietsbook</h1>
-        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
             <a href="../">Home</a>
             <a href="../tools/">Tools</a>
@@ -40,6 +33,7 @@
             <a href="../contact/">Contact Us</a>
         </nav>
     </header>
+    
     <main class="bruh">
 
         <h1>Privacy Policy Fietsbook</h1>
@@ -82,7 +76,7 @@
     <footer>
         <div class="bottom-nav">
             <ul>
-                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="./">Privacy Policy</a></li>
                 <li><a href="../about/">About</a></li>
                 <li><a href="../contact/index.php">Contact</a></li>
                 <li><a href="../links/">Useful links</a></li>

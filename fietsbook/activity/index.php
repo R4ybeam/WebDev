@@ -44,14 +44,23 @@ $result = $conn->query($query);
         <img src="../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
+        <div class="language-toggle">
+            <div class="dropdown">
+                <button class="dropbtn" id="color-scheme-btn">Scheme</button>
+                <div class="dropdown-content">
+                    <a href="#" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
+                    <a href="#" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
+                </div>
+            </div>  
+        </div>
         <nav>
-                <a href="../">Home</a>
-                <a href="../tools/">Tools</a>
-                <a href="../hotspots/">Hotspots</a>
-                <a href="../about/">About</a>
-                <a href="./">Activity</a>
-                <a href="../contact/">Contact Us</a>
-  
+            <a href="../">Home</a>
+            <a href="../tools/">Tools</a>
+            <a href="../hotspots/">Hotspots</a>
+            <a href="../about/">About</a>
+            <a href="./">Activity</a>
+            <a href="../contact/">Contact Us</a>
+            
         </nav>
     </header>
 
@@ -84,11 +93,11 @@ $result = $conn->query($query);
         <section>
             <div class="bottom-nav">
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Useful links</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="../privacy/">Privacy Policy</a></li>
+                    <li><a href="../about/">About</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                    <li><a href="../links">Useful links</a></li>
+                    <li><a href="../service/">Terms of Service</a></li>
                 </ul>
             </div>
         </section>

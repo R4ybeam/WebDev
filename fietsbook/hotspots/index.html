@@ -15,34 +15,25 @@
 <body>
     <input type="checkbox" id="menu-toggle" style="display: none;">
     <header>
+        <img src="../images/logo.png" alt="Fietsbook logo">
+        <h1>Fietsbook</h1>
+        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <div class="language-toggle">
             <div class="dropdown">
                 <button class="dropbtn" id="color-scheme-btn">Scheme</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
-                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                    <a href="#" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
+                    <a href="#" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" id="language-btn">Language</button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="setLanguage('en')">English</a>
-                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
-                </div>
-            </div>
+            </div>  
         </div>
-        <img src="../images/logo.png" alt="Fietsbook logo">
-        <h1>Fietsbook</h1>
-        <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-            
-                <a href="../">Home</a>
-                <a href="../tools/">Tools</a>
-                <a href="#">Hotspots</a>
-                <a href="../about/">About</a>
-                <a href="../activity/">Activity</a>
-                <a href="../contact/">Contact Us</a>
-           
+            <a href="../">Home</a>
+            <a href="../tools/">Tools</a>
+            <a href="#">Hotspots</a>
+            <a href="../about/">About</a>
+            <a href="../activity/">Activity</a>
+            <a href="../contact/">Contact Us</a>
         </nav>
     </header>
 
@@ -55,11 +46,11 @@
         <section>
             <div class="bottom-nav">
                 <ul>
-                    <li><a href="../voorwaarden/index.html">Privacy Policy</a></li>
-                    <li><a href="../about/index.html">About</a></li>
-                    <li><a href="../contact/index.php">Contact</a></li>
-                    <li><a href="../links/index.html">Useful links</a></li>
-                    <li><a href="../service/index.html">Terms of Service</a></li>
+                    <li><a href="../voorwaarden/">Privacy Policy</a></li>
+                    <li><a href="../about/">About</a></li>
+                    <li><a href="../contact/">Contact</a></li>
+                    <li><a href="../links/">Useful links</a></li>
+                    <li><a href="../service/">Terms of Service</a></li>
                 </ul>
             </div>
         </section>
