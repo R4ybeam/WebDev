@@ -99,7 +99,6 @@ if (isset($_POST['btnSubmit'])) {
         </div>
         <nav>
             <a href="../">Home</a>
-			<a href="../products/">Products</a>
             <a href="../tools/">Tools</a>
             <a href="../hotspots/">Hotspots</a>
             <a href="../about/">About</a>
