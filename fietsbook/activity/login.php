@@ -16,15 +16,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $query = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
-    $result = $conn->query($query);
+    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        $_SESSION['user_id'] = $row['id'];
-        $_SESSION['username'] = $row['username'];
-        header("Location: index.php");
-        exit();
+
+        if (password_verify($password, $row['password'])) {
+            $_SESSION['user_id'] = $row['id'];
+            $_SESSION['username'] = $row['username'];
+            header("Location: index.php");
+            exit();
+        } else {
+            $error = "Invalid username or password";
+        }
     } else {
         $error = "Invalid username or password";
     }
@@ -37,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="https://unkpg.com/@csstools/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/activity.css">
 </head>
