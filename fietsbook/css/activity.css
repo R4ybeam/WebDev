@@ -61,7 +61,7 @@ textarea {
 
 /* Additional styles for logout link */
 
-a {
+button a {
     text-decoration: none;
     color: #555;
 }
