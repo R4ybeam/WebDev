@@ -9,6 +9,7 @@
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 15px;
+    text-align: center;
 }
 
 /* form */
@@ -89,16 +90,6 @@ button:hover {
 .dark-mode form {
     background-color: #333;
     color: #ddd;
-}
-
-.dark-mode .formmessage,
-.dark-mode .error,
-.dark-mode label,
-.dark-mode input[type="text"],
-.dark-mode textarea,
-.dark-mode input[type="submit"],
-.dark-mode button {
-    border: 1px solid #aaa;
 }
 
 .dark-mode .message {
