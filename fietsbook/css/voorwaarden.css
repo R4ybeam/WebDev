@@ -7,10 +7,10 @@ p{
 }
 
 .bruh ul {
-    margin: 2rem 2rem 2rem 0;
+    margin: 2rem 7rem 2rem 0;
 }
 
- ul:last-child {
+ .bruh ul:last-child {
     list-style: none;
 }
 
