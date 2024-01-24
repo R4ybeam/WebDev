@@ -1,7 +1,6 @@
-/* Welcome Section */
 .funwelcome {
     padding: 2rem;
-    margin: 2rem 10rem; /* 2rem top and bottom, 10rem left and right */
+    margin: 2rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -19,10 +18,9 @@
     font-size: 1rem;
 }
 
-/* Featured Bicycles Section */
 .product-title {
     padding: 2rem;
-    margin: 2rem 10rem; /* 2rem top and bottom, 10rem left and right */
+    margin: 2rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -44,24 +42,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin: 2rem 4rem; /* Remove margin and add negative margin */
+    margin: 1rem;
 }
 
 .product {
-    width: calc(25% - 2rem); /* Calculate width with margin adjustment */
+    width: calc(25% - 2rem);
     background-color: #fff;
     padding: 15px;
     margin: 10px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    box-sizing: border-box; /* Include padding and border in the width */
+    box-sizing: border-box;
 }
 
 .product img {
     width: 100%;
-    height: 55%; /* Set height to 100% to maintain aspect ratio */
-    object-fit: cover; /* Crop the image to cover the container */
+    height: 55%;
+    object-fit: cover;
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -98,12 +96,12 @@
     background-color: #333;
 }
 
-/* "Contacteer ons" link */
 main a {
     display: block;
     text-align: center;
     font-size: 1rem;
-    margin: 2rem 2rem -4rem 2rem; /* 2rem top and bottom, 10rem left and right */
+    margin-top: 2rem;
+    margin-bottom: -4rem;
     color: #4a6e7a;
     text-decoration: underline;
 }
@@ -111,3 +109,56 @@ main a {
 main a:hover {
     color: #333;
 }
+
+.dark-mode {
+    /* Dark Mode Welcome Section */
+    background-color: #333;
+    color: #ddd;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .funwelcome h2,
+.dark-mode .product-title h2 {
+    color: #ddd;
+
+}
+
+.dark-mode .funwelcome p,
+.dark-mode .product-title p {
+    color: #aaa;
+
+}
+
+/* Dark Mode Product Listing */
+.dark-mode .product-listing {
+    margin: 2rem 4rem;
+}
+
+.dark-mode .product {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .product h3,
+.dark-mode .product .price {
+    color: #ddd;
+}
+
+.dark-mode .product p {
+    color: #aaa;
+}
+
+.dark-mode .product button {
+    background-color: #4a6e7a;
+}
+
+.dark-mode main a {
+    margin: 2rem 2rem -4rem 2rem;
+    color: #5b8796;
+}
+
+.dark-mode main a:hover {
+    color: #ddd;
+}
+
+
