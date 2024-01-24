@@ -57,6 +57,7 @@ $result = $conn->query($query);
 
     <main>
         <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+        <button><a href="logout.php">Logout</a></button>
 
         <form action="post.php" method="post">
             <textarea name="content" placeholder="What's on your mind?"></textarea>
