@@ -88,7 +88,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <p>Already have an account? <a href="../login/">Login here</a></p>
         </section>
     </main>
-
     <footer>
         <section>
             <div class="bottom-nav">
