@@ -103,7 +103,7 @@ main a {
     display: block;
     text-align: center;
     font-size: 1rem;
-    margin: 2rem 10rem; /* 2rem top and bottom, 10rem left and right */
+    margin: 2rem 2rem -4rem 2rem; /* 2rem top and bottom, 10rem left and right */
     color: #4a6e7a;
     text-decoration: underline;
 }
