@@ -41,16 +41,16 @@ $result = $conn->query($query);
 <body class="show-nav">
     <input type="checkbox" id="menu-toggle" style="display: none;">
     <header>
-        <img src="./images/logo.png" alt="Fietsbook logo">
+        <img src="../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-                <a href="./">Home</a>
-                <a href="./tools/">Tools</a>
-                <a href="./hotspots/">Hotspots</a>
-                <a href="./about/">About</a>
-                <a href="./activity/">Activity</a>
-                <a href="./contact/">Contact Us</a>
+                <a href="../">Home</a>
+                <a href="../tools/">Tools</a>
+                <a href="../hotspots/">Hotspots</a>
+                <a href="../about/">About</a>
+                <a href=".//">Activity</a>
+                <a href="../contact/">Contact Us</a>
   
         </nav>
     </header>
