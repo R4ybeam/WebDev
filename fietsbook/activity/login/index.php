@@ -80,22 +80,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <main>
         <section class="container">
             <h2>Login</h2>
+            
+            <?php if (isset($error)): ?>
+               <p style="color: red;"><?php echo $error; ?></p>
+            <?php endif; ?>
 
-                <?php if (isset($error)): ?>
-                    <p style="color: red;"><?php echo $error; ?></p>
-                <?php endif; ?>
+            <form action="./" method="post">
+                <label for="username">Username:</label>
+                <input type="text" name="username" required>
 
-                <form action="./" method="post">
-                    <label for="username">Username:</label>
-                    <input type="text" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" name="password" required>
 
-                    <label for="password">Password:</label>
-                    <input type="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
 
-                    <button type="submit">Login</button>
-                </form>
-
-                <p>Don't have an account? <a href="../register/">Register here</a></p>
+            <p>Don't have an account? <a href="../register/">Register here</a></p>
         </section>
     </main>
     <footer>
