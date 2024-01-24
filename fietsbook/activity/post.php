@@ -12,21 +12,18 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Check if the user is logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-
-// Insert new post into the database
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $content = $_POST['content'];
+    $content = $conn->real_escape_string($_POST['content']);
     $user_id = $_SESSION['user_id'];
 
-    $query = "INSERT INTO posts (user_id, content) VALUES ($user_id, '$content')";
-    $conn->query($query);
-
-    header("Location: index.php");
-    exit();
+    $insertQuery = $conn->prepare("INSERT INTO posts (user_id, content) VALUES (?, ?)");
+    $insertQuery->bind_param("is", $user_id, $content);
+    
+    if ($insertQuery->execute()) {
+        header("Location: index.php");
+        exit();
+    } else {
+        echo "Error: " . $insertQuery->error;
+    }
 }
 ?>
