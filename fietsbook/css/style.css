@@ -96,10 +96,10 @@ header img {
     font-size: 1.5rem;
     cursor: pointer;
     display: none;
-    position: fixed;
+    position: absolute;
     top: 5%;
     left: 10px;
-    z-index: 1100;
+    z-index: 1100; /*wrm/wa doe da..?*/
 }
 
 nav {
@@ -127,9 +127,6 @@ nav a {
 nav a:hover {
     background-color: #63b0a8; /* Lighter shade than the background color */
     color: rgba(255, 255, 255, 0.524);
-}
-main {
-    flex-grow: ;
 }
 
 .temp-nav {
