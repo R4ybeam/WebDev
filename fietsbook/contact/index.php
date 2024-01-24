@@ -83,7 +83,7 @@ if (isset($_POST['btnSubmit'])) {
 </head>
 
 <body>
-    <input type="checkbox" id="menu-toggle">
+    <input type="checkbox" id="menu-toggle" style="display: none;">
     <header>
         <img src="../images/logo.png" alt="Fietsbook logo">
         <h1>Fietsbook</h1>
