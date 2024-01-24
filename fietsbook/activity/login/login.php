@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (password_verify($password, $row['password'])) {
             $_SESSION['user_id'] = $row['id'];
             $_SESSION['username'] = $row['username'];
-            header("Location: index.php");
+            header("Location: ../");
             exit();
         } else {
             $error = "Invalid username or password";
@@ -45,8 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://unpkg.com/@csstools/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/activity.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/activity.css">
 </head>
 <body>
 <input type="checkbox" id="menu-toggle">
@@ -55,13 +55,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h1>Fietsbook</h1>
         <label for="menu-toggle" id="menu-icon">&#9776;</label>
         <nav>
-            <a href="../">Home</a>
-			<a href="../products/">Products</a>
-            <a href="../tools/">Tools</a>
-            <a href="../hotspots/">Hotspots</a>
-            <a href="../about/">About</a>
-            <a href="./">Activity</a>
-            <a href="../contact/">Contact Us</a>
+            <a href="../../">Home</a>
+			<a href="../../products/">Products</a>
+            <a href="../../tools/">Tools</a>
+            <a href="../../hotspots/">Hotspots</a>
+            <a href="../../about/">About</a>
+            <a href="../">Activity</a>
+            <a href="../../contact/">Contact Us</a>
         </nav>
     </header>
 
@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <button type="submit">Login</button>
     </form>
 
-    <p>Don't have an account? <a href="register.php">Register here</a></p>
+    <p>Don't have an account? <a href="../register/">Register here</a></p>
     <footer>
         <section>
             <div class="bottom-nav">
@@ -96,6 +96,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </section>
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
-    <script src="../js/lang_color.js"></script> 
+    <script src="../../js/lang_color.js"></script> 
 </body>
 </html>

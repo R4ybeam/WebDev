@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ./login/");
     exit();
 }
 
@@ -49,34 +49,35 @@ $result = $conn->query($query);
                 <a href="../tools/">Tools</a>
                 <a href="../hotspots/">Hotspots</a>
                 <a href="../about/">About</a>
-                <a href=".//">Activity</a>
+                <a href="./">Activity</a>
                 <a href="../contact/">Contact Us</a>
   
         </nav>
     </header>
 
     <main>
-        <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
-        <button><a href="logout.php">Logout</a></button>
+        <section class="container">
+            <h1>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+            <button><a href="logout.php">Logout</a></button>
 
-        <form action="post.php" method="post">
-            <textarea name="content" placeholder="What's on your mind?"></textarea>
-            <button type="submit">Post</button>
-        </form>
+            <form action="post.php" method="post">
+                <textarea name="content" placeholder="What's on your mind?"></textarea>
+                <button type="submit">Post</button>
+            </form>
 
-        <h2>Recent Posts</h2>
+            <h2>Recent Posts</h2>
 
-        <?php
-        while ($row = $result->fetch_assoc()) {
-            $postId = $row['id'];
-            $authorUsername = htmlspecialchars($row['author_username']);
-            $content = htmlspecialchars($row['content']);
-            $createdAt = htmlspecialchars($row['created_at']);
+            <?php
+            while ($row = $result->fetch_assoc()) {
+                $postId = $row['id'];
+                $authorUsername = htmlspecialchars($row['author_username']);
+                $content = htmlspecialchars($row['content']);
+                $createdAt = htmlspecialchars($row['created_at']);
 
-            echo "<p><strong>{$authorUsername}</strong> posted on {$createdAt}:<br>{$content}</p>";
-        }
-        ?>
-
+                echo "<p><strong>{$authorUsername}</strong> posted on {$createdAt}:<br>{$content}</p>";
+            }
+            ?>
+    </section>
     </main>
 
     <footer>
