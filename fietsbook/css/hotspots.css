@@ -11,5 +11,13 @@ main h2{
 	flex-direction: row;
 	justify-content: center;
 	margin: 0 0 .85rem 0;
+}
 
+.dark-mode main {
+	background-color: #333;
+	color: #ddd;
+}
+
+.dark-mode main h2 {
+	color: #ddd;
 }

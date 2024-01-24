@@ -71,3 +71,52 @@ button a {
 a:hover {
     text-decoration: underline;
 }
+
+.dark-mode .container {
+    background-color: #333;
+    color: #ddd;
+}
+
+.dark-mode form {
+    background-color: #333;
+    color: #ddd;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="password"] {
+    background-color: #555;
+    color: #ddd;
+    border: 1px solid #aaa;
+}
+
+.dark-mode button {
+    color: #555;
+    border: 1px solid #555;
+}
+
+.dark-mode button:hover {
+    background-color: #333;
+    color: #ddd;
+}
+
+.dark-mode .error {
+    color: #ff5c5c;
+}
+
+/* Additional styles for index.php (main content) */
+
+.dark-mode textarea {
+    background-color: #555;
+    color: #ddd;
+    border: 1px solid #aaa;
+}
+
+/* Additional styles for logout link */
+
+.dark-mode button a {
+    color: #ddd;
+}
+
+.dark-mode a:hover {
+    text-decoration: underline;
+}
