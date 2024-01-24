@@ -14,10 +14,10 @@ body {
 }
 
 /* Header Styles */
-input {
+#menu-toggle {
     display: none;
 }
-
+/* shit hierboven fuckte me input boxes voor inloggen registreren en contact als het niet werkt verander #menu-toggle terug naar input */
 header {
     background-color: #4a6e7a;
     color: #fff;
