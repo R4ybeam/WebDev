@@ -20,58 +20,50 @@
             <div class="dropdown">
                 <button class="dropbtn" id="color-scheme-btn">Scheme</button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="setColorScheme('default')">Scheme1</a>
-                    <a href="#" onclick="setColorScheme('alternate')">Scheme2</a>
+                    <a href="#" id="color-scheme-btn-light" onclick="setColorScheme('default')">Light Mode</a>
+                    <a href="#" id="color-scheme-btn-dark" onclick="setColorScheme('alternate')">Dark Mode</a>
                 </div>
-            </div>
-            <div class="dropdown">
-                <button class="dropbtn" id="language-btn">Language</button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="setLanguage('en')">English</a>
-                    <a href="#" onclick="setLanguage('nl')">Dutch</a>
-                </div>
-            </div>
+            </div>  
         </div>
         <nav>
-                <a href="./">Home</a>
-                <a href="./tools/">Tools</a>
-                <a href="./hotspots/">Hotspots</a>
-                <a href="./about/">About</a>
-                <a href="./activity/">Activity</a>
-                <a href="./contact/">Contact Us</a>
-  
+            <a href="./">Home</a>
+            <a href="./tools/">Tools</a>
+            <a href="./hotspots/">Hotspots</a>
+            <a href="./about/">About</a>
+            <a href="./activity/">Activity</a>
+            <a href="./contact/">Contact Us</a>
         </nav>
     </header>
 
     <main>
         <div class="funwelcome">
             <h2>Welcome!</h2>
-            <p>Fietsbook is de meest geavanceerde website online als het gaat om het aanschaffen van fietsen. We delen niet alleen tips over hoe u aan uw fietsen kunt komen, we verkopen u ook de benodigde matriaal en laten u de optimale locaties zien om uw fietsen op te halen!</p>
+            <p>Fietsbook is the most advanced website online when it comes to purchasing bicycles. We not only share tips on how to get your bikes, but we also sell you the necessary materials and show you the optimal locations to pick up your bikes!</p>
             <p>...</p>
-            <p>In onze website zal jij veel handige spullen vinden om met jouw belangerijke job toe te komen en weg van de politie te houden.</p>
+            <p>In our website, you will find many handy items to help you with your important job and stay away from the police.</p>
             <p>...</p>
-            <p>Onze website gebruikt de mystieke 7 factor beveiliging en is politie-proof, surf onze website zonder zorgen en veel plezier.</p>
+            <p>Our website uses the mystical 7-factor security and is police-proof, surf our website without worries and have a lot of fun.</p>
         </div>
-        
+
         <div class="product-title">
-			<h2>Featured Bicycles</h2>
-            <p>Na dat uw een fiets heeft in jouw inventaris, kunt uw ons berijken via onze contact pagina om die fiets simple en snel te verkopen.</p>
+            <h2>Featured Bicycles</h2>
+            <p>After you have a bike in your inventory, you can reach us via our contact page to sell that bike quickly and easily.</p>
             <p>...</p>
-            <p>Schrijf enkel jouw website username, name, email en boodschap en wij zullen jouw contacteren voor de verdere details.</p>
-		</div>
-		
+            <p>Just write your website username, name, email, and message, and we will contact you for further details.</p>
+        </div>
+
         <section class="product-listing">
             <div class="product">
-                <img src="./images/elektrische_fiets.jpg" alt="Elektrische fiets">
-                <h3>Elektrische fiets</h3>
+                <img src="./images/elektrische_fiets.jpg" alt="Electric Bike">
+                <h3>Electric Bike</h3>
                 <p>Premium bike for speedy travel over long and short distances.</p>
                 <p class="price">$200</p>
                 <button>Buy now</button>
             </div>
 
             <div class="product">
-                <img src="./images/stadsfiets1.jpg" alt="Stadsfiets">
-                <h3>Stadsfiets</h3>
+                <img src="./images/stadsfiets1.jpg" alt="City Bike">
+                <h3>City Bike</h3>
                 <p>Built for casual cycling in cities and towns.</p>
                 <p class="price">$50</p>
                 <button>Buy now</button>
@@ -106,15 +98,15 @@
             </div>
         </section>
 
-        <a href="./contact/">contacteer ons!</a>
-        
+        <a>Contact us!</a>
+
     </main>
 
     <footer>
         <section>
             <div class="bottom-nav">
                 <ul>
-                    <li><a href="./voorwaarden/">Privacy Policy</a></li>
+                    <li><a href="./privacy/">Privacy Policy</a></li>
                     <li><a href="./about/">About</a></li>
                     <li><a href="./contact/">Contact</a></li>
                     <li><a href="./links/">Useful links</a></li>
@@ -125,7 +117,35 @@
         <p>&copy; 2023 Fietsbook. All rights reserved.</p>
     </footer>
 
-    <script src="../js/lang_color.js"></script>  
+    <script src="../js/lang_color.js"></script>
+    <script>
+        // JavaScript for toggling between light mode and dark mode
+        function setColorScheme(scheme) {
+            // Remove existing color scheme classes
+            document.body.classList.remove('dark-mode', 'light-mode');
+
+            // Add the selected color scheme class
+            if (scheme === 'default') {
+                document.body.classList.add('light-mode');
+            } else if (scheme === 'alternate') {
+                document.body.classList.add('dark-mode');
+            }
+
+            // Apply dark mode to specific elements
+            applyDarkModeToElements(scheme);
+        }
+
+        // Function to apply dark mode styles to specific elements
+        function applyDarkModeToElements(scheme) {
+            const elementsToStyle = ['.funwelcome', '.product-title'];
+            elementsToStyle.forEach((selector) => {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach((element) => {
+                    element.classList.toggle('dark-mode', scheme === 'alternate');
+                });
+            });
+        }
+    </script>
 </body>
 
 </html>
