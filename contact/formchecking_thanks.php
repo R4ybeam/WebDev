@@ -19,8 +19,8 @@
 <body>
     <header>
         <nav>
-            <h1>Miguel Ringoot</h1>
-            <ul>
+            <img src="../img/MLogo-removebg-preview.png" alt="miguel ringoot logo">
+            <ul class="nav-links">
                 <li>
                     <a href="../">Home</a>
                 </li>
@@ -34,7 +34,7 @@
                     <a href="../blog/">Blog</a>
                 </li>
                 <li>
-                    <a href="../contact/">Contact</a>
+                    <a href="./">Contact</a>
                 </li>
             </ul>
         </nav>

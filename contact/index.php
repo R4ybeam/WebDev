@@ -86,8 +86,8 @@ if (isset($_POST['btnSubmit'])) {
 <body>
     <header>
         <nav>
-            <h1>Miguel Ringoot</h1>
-            <ul>
+            <img src="../img/MLogo-removebg-preview.png" alt="miguel ringoot logo">
+            <ul class="nav-links">
                 <li>
                     <a href="../">Home</a>
                 </li>

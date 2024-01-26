@@ -36,7 +36,7 @@ header {
 }
 
 header img {
-    max-width: 5rem;
+    max-width: 7rem;
 }
 
 /* nav */
@@ -45,10 +45,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-nav h1 { 
-    margin: 1rem 2rem;
 }
 
 nav ul {
@@ -134,7 +130,7 @@ nav a {
 
 .cards li>img {
     order: -1;
-    max-width: 100%;
+    width: 100%;
     border-radius: 15px;
 }
 
@@ -221,6 +217,5 @@ input[type="submit"] {
     font-weight: bold;
     color: #fff;
     cursor: pointer;
-    transition: backgound-color 0.3s ease;
     border-radius: 50px;
 }
