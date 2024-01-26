@@ -53,18 +53,28 @@ if (isset($_POST['btnSubmit'])) {
 
     // end of form check. If $allOk still is true, then the form was sent in correctly
     if ($allOk) {
-        $stmt = $db->exec('INSERT INTO messages (sender, email, message, added_on) VALUES (\'' . $name . '\',\'' . $email . '\',\'' . $message . '\',\'' . (new DateTime())->format('Y-m-d H:i:s') . '\')');
-
-        // the query succeeded, redirect to this very same page
-        if ($db->lastInsertId() !== 0) {
-            header('Location: formchecking_thanks.php?name=' . urlencode($name));
-            exit();
-        } // the query failed
-        else {
-            echo 'Databankfout.';
+        // Use prepared statement to prevent SQL injection
+        $stmt = $db->prepare('INSERT INTO messages (sender, email, message, added_on) VALUES (?, ?, ?, ?)');
+        
+        $timestamp = (new DateTime())->format('Y-m-d H:i:s');
+        
+        try {
+            $stmt->execute([$name, $email, $message, $timestamp]);
+    
+            // the query succeeded, redirect to this very same page
+            if ($db->lastInsertId() !== 0) {
+                header('Location: formchecking_thanks.php?name=' . urlencode($name));
+                exit();
+            } // the query failed
+            else {
+                echo 'Databankfout.';
+                exit;
+            }
+        } catch (PDOException $e) {
+            // Handle the exception (e.g., log it) and display a generic error message to the user
+            echo 'Databankfout: ' . $e->getMessage();
             exit;
         }
-
     }
 
 }
