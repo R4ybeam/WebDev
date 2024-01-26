@@ -7,6 +7,7 @@
 body {
     background-color: #000;
     font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     margin: 0;
     color: #fff;
@@ -84,7 +85,7 @@ nav a {
     display: flex;
     flex-direction: column;
     background-color: #111;
-    max-width: 60rem;
+    max-width: 90%;
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 15px;
@@ -94,8 +95,22 @@ nav a {
     margin-top: 0;
 }
 
-section > img {
-    max-width: 50%;
+/* introduction */
+
+.introduction {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.introduction article {
+    align-self: center;
+}
+
+.introduction img {
+    max-width: 100%;
+    border-radius: 15px;
+    max-height: 45rem;
 }
 
 /* cards */
