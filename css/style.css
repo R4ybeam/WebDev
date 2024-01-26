@@ -107,12 +107,14 @@ nav a {
 
 .introduction article {
     align-self: center;
+    margin: 0 auto;
 }
 
 .introduction img {
     max-width: 100%;
     border-radius: 15px;
-    max-height: 45rem;
+    max-height: 40rem;
+    margin: 5rem;
 }
 
 /* cards */
