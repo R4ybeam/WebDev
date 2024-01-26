@@ -9,14 +9,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="path/to/baguetteBox.min.css">
     <link rel="icon" href="../../img/MLogo-removebg-preview.png">
 </head>
 
 <body>
     <header>
         <nav>
-            <img src="./img/MLogo-removebg-preview.png" alt="miguel ringoot logo">
+            <img src="../../img/MLogo-removebg-preview.png" alt="miguel ringoot logo">
             <ul class="nav-links">
                 <li>
                     <a href="../../">Home</a>
@@ -37,19 +38,65 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h1></h1>
+        <section class="container">
+            <h1>Fietsbook</h1>
+            <div class="introduction">
+                <article>
+                    <p>Fietsbook is een webshop waar je gestolen fietsen kan kopen en verkopen aan een goedkope prijs.</p>
+                    <p>Het is gemaakt door Miguel Ringoot, Joren Vercammen , Zane Peeters en Jefke Denissen.</p>
+                    <p>Dit was ons project voor co-working voor het vak Web & Mobile development.</p>
+                    <a href="../../fietsbook/"> ga naar fietsbook</a>
+                </article>
+                <img src="../../img/products.png" alt="webshop die fietsen verkoopt">
+            </div>
         </section>
-        <section>
-            <h2></h2>
+        <section class="container">
+            <h2>Extra foto's</h2>
+            <div class="gallery">
+                <a href="../../fietsbook/images/logo.png" data-caption="Idee 1 logo Fietsbook">
+                    <img src="../../fietsbook/images/logo.png" alt="logo fietswiel met geel slot rond de band">
+                </a>
+                
+                <a href="../../fietsbook/images/logo2.jpg" data-caption="Idee 2 logo Fietsbook">
+                    <img src="../../fietsbook/images/logo2.jpg" alt="logo fietswiel met geel slot in het midden">
+                </a>
+
+                <a href="../../img/heatmap.png" data-caption="Heatmap Fietsbook">
+                    <img src="../../img/heatmap.png" alt="afbeelding van een heatmap">
+                </a>
+
+                <a href="../../img/activity.png" data-caption="Activity Fietsbook">
+                    <img src="../../img/activity.png" alt="websitepagina met berichten">
+                </a>
+
+                <a href="../../img/contact.png" data-caption="Contactpagina Fietsbook">
+                    <img src="../../img/contact.png" alt="contactpagina van een website">
+                </a>
+            </div>
         </section>
-        <section>
-            <h2></h2>
+        <section class="container">
+            <h2>Technische informatie</h2>
+            <p>Gebruikte services</p>
+            <ul>
+                <li>Github</li>
+                <li>Plesk</li>
+            </ul>
+            <p>Gebruikte talen</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PHP</li>
+            </ul>
         </section>
     </main>
     <footer>
         <p>Copyright &copy; 2023 Miguel Ringoot</p>
     </footer>
+    <script src="path/to/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.gallery');
+    </script>
 </body>
 
 </html>

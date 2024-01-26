@@ -93,8 +93,12 @@ nav a {
     border-radius: 15px;
 }
 
-.container h2 {
+.container h1, .container h2, .container h3 {
     margin-top: 0;
+}
+
+.container a {
+    color: #551a8b;
 }
 
 /* introduction */
@@ -226,4 +230,12 @@ input[type="submit"] {
     color: #fff;
     cursor: pointer;
     border-radius: 50px;
+}
+
+/* gallery */
+
+.gallery img {
+    aspect-ratio: 1/1;
+    width: 19%;
+    border-radius: 15px;
 }
